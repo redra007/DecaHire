@@ -1,0 +1,312 @@
+# Image Replacement Guide - Exact Line Numbers
+
+This file tells you EXACTLY which lines in index.html to change to use your own images instead of Unsplash.
+
+## Current Status: Logo Already Updated! ✅
+- Navigation logo (line 1777): ✅ Already points to images/logo.png
+- Footer logo (line 2779): ✅ Already points to images/logo.png
+
+Just upload your logo as "logo.png" in the images folder and you're done!
+
+---
+
+## Images to Replace
+
+### METHOD 1: Keep Using Unsplash (Easy - No Changes Needed)
+The current Unsplash images look professional and are free to use. You can launch with these and replace them later.
+
+### METHOD 2: Use Your Own Images (Recommended)
+
+Here are ALL the image locations in your HTML file:
+
+---
+
+### 1. HERO BANNER (Main top image)
+**Line 1791**
+```html
+Current: <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1400&h=700&fit=crop&q=80" 
+
+Replace with: <img src="images/hero.jpg"
+```
+**Your image**: Save as `hero.jpg` (1400×700px recommended)
+**Shows**: Main banner - modern tech office or team collaboration
+
+---
+
+### 2. HOW WE WORK SECTION
+**Line 1887**
+```html
+Current: <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1200&h=400&fit=crop&q=80" 
+
+Replace with: <img src="images/how-we-work.jpg"
+```
+**Your image**: Save as `how-we-work.jpg` (1200×400px)
+**Shows**: Team collaboration or workflow process
+
+---
+
+### 3. PRODUCT/TECH FEATURE CARDS (3 images)
+
+**Line 1969 - Feature Card 1**
+```html
+Current: background-image: url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=600&fit=crop&q=80');
+
+Replace with: background-image: url('images/feature-ai.jpg');
+```
+**Your image**: Save as `feature-ai.jpg` (800×600px)
+**Shows**: AI/automation or technology dashboard
+
+**Line 1985 - Feature Card 2**
+```html
+Current: background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop&q=80');
+
+Replace with: background-image: url('images/feature-candidates.jpg');
+```
+**Your image**: Save as `feature-candidates.jpg` (800×600px)
+**Shows**: People or candidate profiles
+
+**Line 2001 - Feature Card 3**
+```html
+Current: background-image: url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=600&fit=crop&q=80');
+
+Replace with: background-image: url('images/feature-integration.jpg');
+```
+**Your image**: Save as `feature-integration.jpg` (800×600px)
+**Shows**: Integration/connectivity or system diagram
+
+---
+
+### 4. PLATFORM FEATURES (3 images)
+
+**Line 2040 - Platform Image 1**
+```html
+Current: background-image: url('https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=600&fit=crop&q=80');
+
+Replace with: background-image: url('images/platform-1.jpg');
+```
+**Your image**: Save as `platform-1.jpg` (800×600px)
+
+**Line 2056 - Platform Image 2**
+```html
+Current: background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop&q=80');
+
+Replace with: background-image: url('images/platform-2.jpg');
+```
+**Your image**: Save as `platform-2.jpg` (800×600px)
+
+**Line 2072 - Platform Image 3**
+```html
+Current: background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop&q=80');
+
+Replace with: background-image: url('images/platform-3.jpg');
+```
+**Your image**: Save as `platform-3.jpg` (800×600px)
+
+---
+
+### 5. HOW WE WORK - PROCESS STEPS (3 images)
+
+**Line 2193**
+```html
+Current: <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=700&h=600&fit=crop&q=80"
+
+Replace with: <img src="images/process-understand.jpg"
+```
+**Your image**: Save as `process-understand.jpg` (700×600px)
+**Shows**: Consultation or discussion
+
+**Line 2211**
+```html
+Current: <img src="https://images.unsplash.com/photo-1553028826-f4804a6dba3b?w=700&h=900&fit=crop&q=80"
+
+Replace with: <img src="images/process-source.jpg"
+```
+**Your image**: Save as `process-source.jpg` (700×900px)
+**Shows**: Searching or analysis
+
+**Line 2229**
+```html
+Current: <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?w=700&h=900&fit=crop&q=80"
+
+Replace with: <img src="images/process-deliver.jpg"
+```
+**Your image**: Save as `process-deliver.jpg` (700×900px)
+**Shows**: Handshake or delivery
+
+---
+
+### 6. WHY CHOOSE US - CARDS (6 small images)
+
+**Line 2335**
+```html
+Current: <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?w=600&h=400&fit=crop&q=80"
+
+Replace with: <img src="images/why-speed.jpg"
+```
+
+**Line 2352**
+```html
+Current: <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=400&fit=crop&q=80"
+
+Replace with: <img src="images/why-understanding.jpg"
+```
+
+**Line 2369**
+```html
+Current: <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=400&fit=crop&q=80"
+
+Replace with: <img src="images/why-quality.jpg"
+```
+
+**Line 2386**
+```html
+Current: <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=400&fit=crop&q=80"
+
+Replace with: <img src="images/why-transparency.jpg"
+```
+
+**Line 2403**
+```html
+Current: <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=600&h=400&fit=crop&q=80"
+
+Replace with: <img src="images/why-partnership.jpg"
+```
+
+**Line 2420**
+```html
+Current: <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?w=600&h=400&fit=crop&q=80"
+
+Replace with: <img src="images/why-guarantee.jpg"
+```
+
+**Image specs**: All 600×400px
+**Shows**: Various business/team concepts
+
+---
+
+### 7. SERVICE SECTIONS (4 main service images)
+
+**Line 2524 - Tech Recruitment**
+```html
+Current: <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&h=500&fit=crop&q=80"
+
+Replace with: <img src="images/service-tech-recruitment.jpg"
+```
+
+**Line 2575 - Executive Search**
+```html
+Current: <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1200&h=500&fit=crop&q=80"
+
+Replace with: <img src="images/service-executive-search.jpg"
+```
+
+**Line 2626 - Contract Hiring**
+```html
+Current: <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=500&fit=crop&q=80"
+
+Replace with: <img src="images/service-contract-hiring.jpg"
+```
+
+**Line 2677 - Talent Advisory**
+```html
+Current: <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=500&fit=crop&q=80"
+
+Replace with: <img src="images/service-talent-advisory.jpg"
+```
+
+**Image specs**: All 1200×500px
+**Shows**: Service-specific imagery
+
+---
+
+### 8. BOTTOM CTA SECTION (3 small images)
+
+**Line 2734**
+```html
+Current: <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=500&h=500&fit=crop&q=80"
+
+Replace with: <img src="images/cta-1.jpg"
+```
+
+**Line 2735**
+```html
+Current: <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=500&h=500&fit=crop&q=80"
+
+Replace with: <img src="images/cta-2.jpg"
+```
+
+**Line 2736**
+```html
+Current: <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=500&h=500&fit=crop&q=80"
+
+Replace with: <img src="images/cta-3.jpg"
+```
+
+**Image specs**: All 500×500px (square)
+**Shows**: Team collaboration, modern office, meetings
+
+---
+
+## Quick Find & Replace
+
+If you're comfortable with code, you can do a bulk find & replace:
+
+### For ALL images at once (Advanced users):
+1. Open index.html in a text editor (VS Code, Notepad++, etc.)
+2. Find: `https://images.unsplash.com/photo-` 
+3. Replace with: `images/your-image-`
+4. Then manually adjust each filename
+
+### Easier Approach:
+Just change them one section at a time as you get new images. Start with:
+1. Logo (already done ✅)
+2. Hero banner (line 1791)
+3. Service images (lines 2524, 2575, 2626, 2677)
+
+---
+
+## Image Optimization Tips
+
+Before uploading to GitHub:
+- Use JPG for photos (smaller file size)
+- Use PNG for logos (transparent background)
+- Compress images: https://tinypng.com or https://squoosh.app
+- Target: Keep each image under 200KB
+- Total images folder: Under 5MB ideally
+
+---
+
+## Testing After Changes
+
+1. Save index.html
+2. Upload to GitHub (or push changes)
+3. Wait 1-2 minutes
+4. Refresh your website
+5. Check browser console (F12) for any image loading errors
+
+---
+
+## Priority Order (if doing this gradually)
+
+High Priority:
+1. ✅ Logo (already done!)
+2. Hero banner (line 1791)
+3. Service images (4 images)
+
+Medium Priority:
+4. How We Work section
+5. Feature cards
+
+Low Priority (can use Unsplash):
+6. Why Choose Us cards
+7. CTA bottom images
+8. Process step images
+
+---
+
+**Remember**: You don't have to replace everything at once. The Unsplash images look professional, so you can:
+1. Launch with Unsplash images
+2. Replace your logo (done!)
+3. Gradually add your own photos over time
+
+Good luck! 🚀

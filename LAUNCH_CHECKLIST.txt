@@ -1,0 +1,134 @@
+# 📋 DecaHire Website Launch Checklist
+
+Print this out or keep it open while you work!
+
+## Phase 1: GitHub Setup (15 minutes)
+
+- [ ] Created GitHub account at https://github.com
+- [ ] Created new repository named "decahire-website"
+- [ ] Set repository to **Public** (required for free Pages)
+- [ ] Uploaded `index.html` file
+- [ ] Uploaded `images` folder (with README inside)
+- [ ] Uploaded all .md and .txt guide files
+
+## Phase 2: Enable Hosting (5 minutes)
+
+- [ ] Went to Settings → Pages in repository
+- [ ] Selected "Deploy from a branch"
+- [ ] Selected "main" branch, "/ (root)" folder
+- [ ] Clicked Save
+- [ ] Waited 2-3 minutes for build to complete
+- [ ] Visited https://YOUR-USERNAME.github.io/decahire-website/
+- [ ] ✅ Website loads successfully!
+
+## Phase 3: Add Your Logo (10 minutes)
+
+- [ ] Have logo file ready on computer
+- [ ] Logo saved as PNG or JPG
+- [ ] Logo file is under 100KB
+- [ ] Renamed logo to `logo.png` (exact name, lowercase)
+- [ ] Went to repository → images folder on GitHub
+- [ ] Clicked "Add file" → "Upload files"
+- [ ] Uploaded logo.png
+- [ ] Committed changes
+- [ ] Waited 1-2 minutes
+- [ ] Refreshed website
+- [ ] ✅ Logo appears in navigation and footer!
+
+## Phase 4: Test Website (5 minutes)
+
+- [ ] Clicked all navigation links - they work
+- [ ] Scrolled through entire page - looks good
+- [ ] Tested on mobile phone - responsive design works
+- [ ] Checked logo displays correctly
+- [ ] All images load (Unsplash placeholders OK for now)
+- [ ] Contact buttons lead to correct sections
+
+## Phase 5: Optional - Custom Domain (30 minutes)
+
+Skip this if you're okay with the github.io URL!
+
+- [ ] Own a domain (e.g., decahire.com)
+- [ ] Logged into domain registrar (GoDaddy, Namecheap, etc.)
+- [ ] Added DNS records:
+  - [ ] CNAME record: www → YOUR-USERNAME.github.io
+  - [ ] A records: @ → GitHub Pages IPs (see SETUP_GUIDE.md)
+- [ ] Went to GitHub Settings → Pages
+- [ ] Entered custom domain
+- [ ] Waited 15-60 minutes for DNS propagation
+- [ ] Checked https://dnschecker.org for propagation
+- [ ] Enabled "Enforce HTTPS" option
+- [ ] ✅ Website works at custom domain!
+
+## Phase 6: Optional - Replace Images (ongoing)
+
+Do this gradually as you get professional photos:
+
+- [ ] Read IMAGE_REPLACEMENT_GUIDE.txt
+- [ ] Identified which images to replace first
+- [ ] Prepared your images (resized, optimized)
+- [ ] Named images according to guide
+- [ ] Uploaded to images folder on GitHub
+- [ ] Updated index.html with new image paths
+- [ ] Tested that new images load correctly
+- [ ] ✅ Custom images look great!
+
+## Phase 7: Share Your Site! 🎉
+
+- [ ] Bookmarked your live site URL
+- [ ] Shared link with team/colleagues
+- [ ] Added link to email signature
+- [ ] Added to LinkedIn profile
+- [ ] Added to business cards
+- [ ] Submitted to Google Search Console (optional)
+- [ ] Set up Google Analytics (optional)
+
+---
+
+## Important URLs to Save:
+
+**Your Website**: https://YOUR-USERNAME.github.io/decahire-website/
+(or https://decahire.com if using custom domain)
+
+**GitHub Repo**: https://github.com/YOUR-USERNAME/decahire-website
+
+**Edit Files**: GitHub repo → Click file → Click pencil icon
+
+---
+
+## Quick Troubleshooting:
+
+**Website not loading?**
+→ Wait 5 minutes, clear cache (Ctrl+Shift+R)
+
+**Logo not showing?**
+→ Check filename is exactly "logo.png" (lowercase)
+→ Check it's in the images folder
+→ Wait 2 minutes after upload
+
+**Images broken?**
+→ Check image paths in HTML match your filenames
+→ Check images are in the images folder
+→ Check file extensions (.jpg vs .png)
+
+**Custom domain not working?**
+→ Wait 30-60 minutes for DNS
+→ Check DNS settings at registrar
+→ Verify at https://dnschecker.org
+
+---
+
+## Next Steps After Launch:
+
+1. **Monitor**: Check site works on different devices
+2. **Improve**: Gradually replace stock images with your own
+3. **Update**: Keep content fresh and current
+4. **SEO**: Submit sitemap to Google Search Console
+5. **Analytics**: Add Google Analytics to track visitors
+6. **Backup**: Keep local copy of all files
+
+---
+
+**Questions?** Check SETUP_GUIDE.md for detailed help!
+
+**Success?** ✅ Congratulations on launching your website! 🚀

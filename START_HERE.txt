@@ -1,0 +1,152 @@
+╔══════════════════════════════════════════════════════════════════╗
+║                    DECAHIRE WEBSITE - QUICK START                ║
+║                  Get Your Website Live in 15 Minutes!            ║
+╚══════════════════════════════════════════════════════════════════╝
+
+📦 WHAT YOU HAVE:
+✅ index.html - Your complete website (already configured!)
+✅ images/ folder - Ready for your logo
+✅ All instructions and guides included
+
+🚀 3-STEP LAUNCH:
+
+┌────────────────────────────────────────────────────────────────┐
+│ STEP 1: CREATE GITHUB ACCOUNT (2 minutes)                     │
+└────────────────────────────────────────────────────────────────┘
+→ Go to: https://github.com
+→ Click "Sign up"
+→ Choose username (e.g., "decahire" or your name)
+→ Verify email
+
+┌────────────────────────────────────────────────────────────────┐
+│ STEP 2: UPLOAD YOUR WEBSITE (5 minutes)                       │
+└────────────────────────────────────────────────────────────────┘
+→ Click "+" (top right) → "New repository"
+→ Name: "decahire-website"
+→ Make it PUBLIC ⚠️ (required for free hosting)
+→ Check "Add a README"
+→ Click "Create repository"
+→ Click "Add file" → "Upload files"
+→ Drag ALL files from decahire-website folder
+→ Commit changes
+
+┌────────────────────────────────────────────────────────────────┐
+│ STEP 3: ENABLE GITHUB PAGES (3 minutes)                       │
+└────────────────────────────────────────────────────────────────┘
+→ Click "Settings" tab
+→ Scroll to "Pages" (left sidebar)
+→ Source: "Deploy from a branch"
+→ Branch: "main", Folder: "/ (root)"
+→ Click "Save"
+→ Wait 2-3 minutes
+→ Your site is live! 🎉
+
+Your website URL will be:
+https://YOUR-USERNAME.github.io/decahire-website/
+
+═══════════════════════════════════════════════════════════════════
+
+🎨 ADD YOUR LOGO (5 minutes):
+
+1. Prepare your logo:
+   - Save as: logo.png
+   - Format: PNG (transparent background recommended)
+   - Size: 200-400px wide
+
+2. Upload to GitHub:
+   - Go to your repository
+   - Click "images" folder
+   - Click "Add file" → "Upload files"
+   - Upload logo.png
+   - Commit changes
+
+3. Wait 1-2 minutes, refresh website
+   ✅ Your logo appears!
+
+═══════════════════════════════════════════════════════════════════
+
+📋 FILES INCLUDED:
+
+index.html ......................... Your main website (ready!)
+SETUP_GUIDE.md ..................... Detailed instructions
+IMAGE_REPLACEMENT_GUIDE.txt ........ How to add your own images
+LAUNCH_CHECKLIST.txt ............... Step-by-step checklist
+README.md .......................... Project overview
+images/README.md ................... Image folder instructions
+
+═══════════════════════════════════════════════════════════════════
+
+🌐 OPTIONAL: CONNECT YOUR DOMAIN
+
+Have a domain like decahire.com? 
+
+1. In GitHub: Settings → Pages → Custom domain
+2. Enter: www.decahire.com
+3. In your domain registrar (GoDaddy, Namecheap, etc.):
+   
+   Add CNAME record:
+   Name: www
+   Value: YOUR-USERNAME.github.io
+   
+   Add A records (all 4):
+   Name: @
+   Values: 185.199.108.153
+           185.199.109.153
+           185.199.110.153
+           185.199.111.153
+
+4. Wait 15-60 minutes
+5. Enable HTTPS in GitHub Pages settings
+6. Done! ✅
+
+Full instructions in SETUP_GUIDE.md
+
+═══════════════════════════════════════════════════════════════════
+
+💡 TIPS:
+
+• Start with the free github.io URL, add custom domain later
+• Current images (Unsplash) look professional - can keep them
+• Replace images gradually as you get your own photos
+• Website is mobile-friendly (responsive design)
+• No coding knowledge needed for basic edits
+
+═══════════════════════════════════════════════════════════════════
+
+❓ HELP:
+
+Website not loading?
+→ Wait 5 mins, clear cache (Ctrl+Shift+R)
+
+Logo not showing?  
+→ Check filename is "logo.png" (exact, lowercase)
+→ Check it's in images/ folder
+
+Need detailed help?
+→ Read SETUP_GUIDE.md
+
+═══════════════════════════════════════════════════════════════════
+
+✅ CURRENT STATUS:
+
+✅ HTML is ready (logo paths already configured)
+✅ All guides included
+✅ File structure correct
+✅ Zero cost hosting ready
+
+🎯 WHAT YOU NEED TO DO:
+
+1. Upload to GitHub ...................... ⏱️ 5 min
+2. Enable Pages .......................... ⏱️ 3 min  
+3. Add your logo ......................... ⏱️ 5 min
+4. [Optional] Custom domain .............. ⏱️ 30 min
+5. [Optional] Replace images ............. ⏱️ As needed
+
+═══════════════════════════════════════════════════════════════════
+
+Ready? Let's go! 🚀
+
+Start with STEP 1 above, or open SETUP_GUIDE.md for detailed
+step-by-step instructions with screenshots and examples.
+
+Good luck with your launch! 
