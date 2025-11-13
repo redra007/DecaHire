@@ -2815,3 +2815,380 @@
                         <li><a href="/cdn-cgi/l/email-protection#87e4e8e9f3e6e4f3c7e3e2e4e6efeef5e2a9e4e8ea"><span class="__cf_email__" data-cfemail="0e6d61607a6f6d7a4e6a6b6d6f66677c6b206d6163">[email&#160;protected]</span></a></li>
                         <li><a href="#contact">Partner With Us</a></li>
                         <li><a href="#">Privacy Pol
+                            </a></li></ul></div></div></div></footer>
+
+<!-- Popup Contact Form -->
+<style>
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 9999;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-overlay.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-container {
+    background: white;
+    border-radius: 16px;
+    max-width: 600px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: slideUp 0.4s ease;
+    position: relative;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(100px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.modal-header {
+    padding: 30px 30px 20px;
+    border-bottom: 1px solid #e0e0e0;
+    position: relative;
+}
+
+.modal-header h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 8px 0;
+}
+
+.modal-header p {
+    font-size: 16px;
+    color: #666;
+    margin: 0;
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    font-size: 32px;
+    color: #999;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    transition: all 0.3s;
+    line-height: 1;
+}
+
+.modal-close:hover {
+    background: #f0f0f0;
+    color: #333;
+}
+
+.modal-body {
+    padding: 30px;
+}
+
+.popup-form-group {
+    margin-bottom: 20px;
+}
+
+.popup-form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #1a1a1a;
+    font-size: 14px;
+}
+
+.popup-form-group input,
+.popup-form-group textarea,
+.popup-form-group select {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: inherit;
+    transition: all 0.3s;
+    background: white;
+}
+
+.popup-form-group input:focus,
+.popup-form-group textarea:focus,
+.popup-form-group select:focus {
+    outline: none;
+    border-color: #ff6b4a;
+    box-shadow: 0 0 0 3px rgba(255, 107, 74, 0.1);
+}
+
+.popup-form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.modal-footer {
+    padding: 0 30px 30px;
+}
+
+.popup-submit-btn {
+    width: 100%;
+    background: #ff6b4a;
+    color: white;
+    padding: 16px 32px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.popup-submit-btn:hover:not(:disabled) {
+    background: #ff5533;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 107, 74, 0.3);
+}
+
+.popup-submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.form-message {
+    margin-top: 20px;
+    padding: 16px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+    display: none;
+}
+
+.form-message.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.form-message.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.form-message.show {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .modal-container { max-height: 95vh; }
+    .form-row { grid-template-columns: 1fr; gap: 0; }
+    .modal-header h2 { font-size: 24px; }
+    .modal-header, .modal-body, .modal-footer { padding: 20px; }
+}
+</style>
+
+<div id="contactModal" class="modal-overlay">
+    <div class="modal-container">
+        <div class="modal-header">
+            <h2>Let's Talk!</h2>
+            <p>Tell us about your hiring needs</p>
+            <button class="modal-close" onclick="closeContactModal()">&times;</button>
+        </div>
+        <div class="modal-body">
+            <form id="popupContactForm">
+                <div class="form-row">
+                    <div class="popup-form-group">
+                        <label for="popup-name">Full Name *</label>
+                        <input type="text" id="popup-name" required placeholder="John Smith">
+                    </div>
+                    <div class="popup-form-group">
+                        <label for="popup-email">Email *</label>
+                        <input type="email" id="popup-email" required placeholder="john@company.com">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="popup-form-group">
+                        <label for="popup-company">Company</label>
+                        <input type="text" id="popup-company" placeholder="Your Company Inc.">
+                    </div>
+                    <div class="popup-form-group">
+                        <label for="popup-phone">Phone</label>
+                        <input type="tel" id="popup-phone" placeholder="+1 (555) 123-4567">
+                    </div>
+                </div>
+                <div class="popup-form-group">
+                    <label for="popup-service">Interested In? *</label>
+                    <select id="popup-service" required>
+                        <option value="">Select a service...</option>
+                        <option value="tech-recruitment">Tech Recruitment</option>
+                        <option value="executive-search">Executive Search</option>
+                        <option value="contract-hiring">Contract Hiring</option>
+                        <option value="talent-advisory">Talent Advisory</option>
+                        <option value="general-inquiry">General Inquiry</option>
+                        <option value="partnership">Partnership</option>
+                    </select>
+                </div>
+                <div class="popup-form-group">
+                    <label for="popup-message">Message *</label>
+                    <textarea id="popup-message" required placeholder="Tell us about your hiring needs..."></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="popup-submit-btn" id="popup-submit-btn">Send Message</button>
+                    <div id="popup-form-message" class="form-message"></div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Popup Contact Form -->
+<style>
+.modal-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.75);z-index:9999;animation:fadeIn 0.3s ease}
+.modal-overlay.active{display:flex;justify-content:center;align-items:center;padding:20px}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+.modal-container{background:white;border-radius:16px;max-width:600px;width:100%;max-height:90vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,0.3);animation:slideUp 0.4s ease;position:relative}
+@keyframes slideUp{from{transform:translateY(100px);opacity:0}to{transform:translateY(0);opacity:1}}
+.modal-header{padding:30px 30px 20px;border-bottom:1px solid #e0e0e0;position:relative}
+.modal-header h2{font-size:28px;font-weight:700;color:#1a1a1a;margin:0 0 8px 0}
+.modal-header p{font-size:16px;color:#666;margin:0}
+.modal-close{position:absolute;top:20px;right:20px;background:transparent;border:none;font-size:32px;color:#999;cursor:pointer;width:40px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:8px;transition:all 0.3s;line-height:1}
+.modal-close:hover{background:#f0f0f0;color:#333}
+.modal-body{padding:30px}
+.popup-form-group{margin-bottom:20px}
+.popup-form-group label{display:block;margin-bottom:8px;font-weight:600;color:#1a1a1a;font-size:14px}
+.popup-form-group input,.popup-form-group textarea,.popup-form-group select{width:100%;padding:14px 16px;border:2px solid #e0e0e0;border-radius:8px;font-size:16px;font-family:inherit;transition:all 0.3s;background:white}
+.popup-form-group input:focus,.popup-form-group textarea:focus,.popup-form-group select:focus{outline:none;border-color:#ff6b4a;box-shadow:0 0 0 3px rgba(255,107,74,0.1)}
+.popup-form-group textarea{resize:vertical;min-height:120px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.modal-footer{padding:0 30px 30px}
+.popup-submit-btn{width:100%;background:#ff6b4a;color:white;padding:16px 32px;border-radius:8px;font-weight:600;font-size:16px;border:none;cursor:pointer;transition:all 0.3s}
+.popup-submit-btn:hover:not(:disabled){background:#ff5533;transform:translateY(-2px);box-shadow:0 6px 20px rgba(255,107,74,0.3)}
+.popup-submit-btn:disabled{opacity:0.6;cursor:not-allowed}
+.form-message{margin-top:20px;padding:16px;border-radius:8px;text-align:center;font-weight:500;display:none}
+.form-message.success{background:#d4edda;color:#155724;border:1px solid #c3e6cb}
+.form-message.error{background:#f8d7da;color:#721c24;border:1px solid #f5c6cb}
+.form-message.show{display:block}
+@media (max-width:768px){.modal-container{max-height:95vh}.form-row{grid-template-columns:1fr;gap:0}.modal-header h2{font-size:24px}.modal-header,.modal-body,.modal-footer{padding:20px}}
+</style>
+
+<div id="contactModal" class="modal-overlay">
+    <div class="modal-container">
+        <div class="modal-header">
+            <h2>Let's Talk!</h2>
+            <p>Tell us about your hiring needs</p>
+            <button class="modal-close" onclick="closeContactModal()">&times;</button>
+        </div>
+        <div class="modal-body">
+            <form id="popupContactForm">
+                <div class="form-row">
+                    <div class="popup-form-group">
+                        <label for="popup-name">Full Name *</label>
+                        <input type="text" id="popup-name" required placeholder="John Smith">
+                    </div>
+                    <div class="popup-form-group">
+                        <label for="popup-email">Email *</label>
+                        <input type="email" id="popup-email" required placeholder="john@company.com">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="popup-form-group">
+                        <label for="popup-company">Company</label>
+                        <input type="text" id="popup-company" placeholder="Your Company Inc.">
+                    </div>
+                    <div class="popup-form-group">
+                        <label for="popup-phone">Phone</label>
+                        <input type="tel" id="popup-phone" placeholder="+1 (555) 123-4567">
+                    </div>
+                </div>
+                <div class="popup-form-group">
+                    <label for="popup-service">Interested In? *</label>
+                    <select id="popup-service" required>
+                        <option value="">Select a service...</option>
+                        <option value="tech-recruitment">Tech Recruitment</option>
+                        <option value="executive-search">Executive Search</option>
+                        <option value="contract-hiring">Contract Hiring</option>
+                        <option value="talent-advisory">Talent Advisory</option>
+                        <option value="general-inquiry">General Inquiry</option>
+                        <option value="partnership">Partnership</option>
+                    </select>
+                </div>
+                <div class="popup-form-group">
+                    <label for="popup-message">Message *</label>
+                    <textarea id="popup-message" required placeholder="Tell us about your hiring needs..."></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="popup-submit-btn" id="popup-submit-btn">Send Message</button>
+                    <div id="popup-form-message" class="form-message"></div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+const SUPABASE_URL='https://xabfzikbvvppdcrijmrw.supabase.co';
+const SUPABASE_ANON_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhhYmZ6aWtidnZwcGRjcmlqbXJ3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjMwMDA3MDYsImV4cCI6MjA3ODU3NjcwNn0.xsSS5MQ06WQdcXwA8pkh95zTNkyAVI_TOS-7lNl0snU';
+const supabase=window.supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY);
+function openContactModal(s=''){const m=document.getElementById('contactModal');m.classList.add('active');document.body.style.overflow='hidden';if(s)document.getElementById('popup-service').value=s;setTimeout(()=>document.getElementById('popup-name').focus(),300)}
+function closeContactModal(){const m=document.getElementById('contactModal');m.classList.remove('active');document.body.style.overflow='';document.getElementById('popupContactForm').reset();document.getElementById('popup-form-message').className='form-message'}
+document.getElementById('contactModal')?.addEventListener('click',function(e){if(e.target===this)closeContactModal()});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeContactModal()});
+let lastSubmitTime=0;const COOLDOWN_MS=30000;
+function validateEmail(e){return/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e)}
+function showMessage(m,s){const d=document.getElementById('popup-form-message');d.textContent=m;d.className='form-message '+(s?'success':'error')+' show';if(s)setTimeout(()=>closeContactModal(),3000)}
+document.getElementById('popupContactForm')?.addEventListener('submit',async function(e){
+e.preventDefault();const now=Date.now();
+if(now-lastSubmitTime<COOLDOWN_MS){showMessage('Please wait '+Math.ceil((COOLDOWN_MS-(now-lastSubmitTime))/1000)+' seconds',false);return}
+const formData={name:document.getElementById('popup-name').value.trim(),email:document.getElementById('popup-email').value.trim(),company:document.getElementById('popup-company').value.trim()||null,phone:document.getElementById('popup-phone').value.trim()||null,service:document.getElementById('popup-service').value,message:document.getElementById('popup-message').value.trim(),status:'new'};
+if(!validateEmail(formData.email)){showMessage('Please enter a valid email',false);return}
+if(formData.message.length<10){showMessage('Please provide more details (min 10 characters)',false);return}
+const btn=document.getElementById('popup-submit-btn');const originalText=btn.textContent;
+btn.textContent='Sending...';btn.disabled=true;
+try{const{data,error}=await supabase.from('contact_submissions').insert([formData]).select();
+if(error)throw new Error(error.message);
+showMessage('Thank you! We will contact you within 24 hours.',true);e.target.reset();lastSubmitTime=now;
+}catch(error){console.error('Error:',error);showMessage('Something went wrong. Please email hello@decahire.com',false);
+}finally{btn.textContent=originalText;btn.disabled=false}
+});
+document.addEventListener('DOMContentLoaded',function(){
+const ctaButtons=document.querySelectorAll('a.cta-button, a[href="#contact"]');
+ctaButtons.forEach(button=>{button.addEventListener('click',function(e){
+e.preventDefault();let service='';const text=this.textContent.toLowerCase();const sectionId=this.closest('section')?.id||'';
+if(text.includes('technology talent')||sectionId==='tech-recruitment')service='tech-recruitment';
+else if(text.includes('leader')||text.includes('executive')||sectionId==='executive-search')service='executive-search';
+else if(text.includes('contract')||text.includes('staffing')||sectionId==='contract-hiring')service='contract-hiring';
+else if(text.includes('advisory')||text.includes('consultation')||sectionId==='talent-advisory')service='talent-advisory';
+else if(text.includes('partner'))service='partnership';
+else service='general-inquiry';
+openContactModal(service);})});
+console.log('✅ Popup ready!',ctaButtons.length,'buttons connected');
+});
+</script>
+
+</body></html>
