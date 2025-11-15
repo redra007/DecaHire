@@ -94,13 +94,18 @@
             padding: 40px 0 80px;
         }
 
-        .hero-image {
+.hero-image {
             width: 100%;
-            height: 500px;
-            object-fit: cover;
+            height: auto; // Changed from 500px to auto to preserve aspect ratio
+            object-fit: contain; // Changed from cover to contain to show full image
             border-radius: 16px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
         }
+
+
+            .hero-image {
+                height: auto; // Changed from 300px to auto for mobile
+            }
 
         .hero h1 {
             font-size: 72px;
