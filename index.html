@@ -41,15 +41,12 @@
             align-items: center;
         }
 
-        /* <CHANGE> Reduced logo height from 80px to 60px */
         .logo {
-            height: 60px;
-            max-height: 60px;
-            width: auto;
-            display: block;
-            margin: 0;
-            padding: 0;
-        }
+    height: 80px;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
 
         .nav-links {
             display: flex;
@@ -87,27 +84,28 @@
         }
 
         /* Hero Section */
-        /* <CHANGE> Reduced padding from 120px to 80px top, 60px to 40px bottom */
         .hero {
-            padding: 80px 0 40px;
+            padding: 120px 0 60px;
             text-align: center;
         }
 
         /* Visual Hero */
-        /* <CHANGE> Reduced padding from 40px/80px to 30px/50px */
         .visual-hero {
-            padding: 30px 0 50px;
+            padding: 40px 0 80px;
         }
 
-        /* <CHANGE> Changed from cover to contain for full image display */
-        .hero-image {
+.hero-image {
             width: 100%;
-            max-height: 500px;
-            height: auto;
-            object-fit: contain;
+            height: auto; // Changed from 500px to auto to preserve aspect ratio
+            object-fit: contain; // Changed from cover to contain to show full image
             border-radius: 16px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
         }
+
+
+            .hero-image {
+                height: auto; // Changed from 300px to auto for mobile
+            }
 
         .hero h1 {
             font-size: 72px;
@@ -153,9 +151,8 @@
         }
 
         /* Stats Section */
-        /* <CHANGE> Reduced padding from 60px to 40px */
         .stats {
-            padding: 40px 0;
+            padding: 60px 0;
             background: #f8f9fa;
         }
 
@@ -179,15 +176,13 @@
         }
 
         /* Features Section */
-        /* <CHANGE> Reduced padding from 100px to 60px */
         .features {
-            padding: 60px 0;
+            padding: 100px 0;
         }
 
         .section-header {
             text-align: center;
-            /* <CHANGE> Reduced margin from 80px to 50px */
-            margin-bottom: 50px;
+            margin-bottom: 80px;
         }
 
         .section-header h2 {
@@ -206,13 +201,11 @@
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            /* <CHANGE> Reduced gap from 60px to 40px */
-            gap: 40px;
+            gap: 60px;
         }
 
-        /* <CHANGE> Reduced padding from 40px to 30px */
         .feature-card {
-            padding: 30px;
+            padding: 40px;
             background: #ffffff;
             border-radius: 16px;
             border: 1px solid #e5e5e5;
@@ -294,9 +287,8 @@
         }
 
         /* Advantage Section */
-        /* <CHANGE> Reduced padding from 100px to 60px */
         .advantage {
-            padding: 60px 0;
+            padding: 100px 0;
             background: linear-gradient(135deg, #1a3a52 0%, #2d5f7f 100%);
             color: white;
         }
@@ -310,15 +302,13 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 40px;
-            /* <CHANGE> Reduced margin from 60px to 40px */
-            margin-top: 40px;
+            margin-top: 60px;
         }
 
-        /* <CHANGE> Reduced padding from 32px to 24px */
         .advantage-card {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
-            padding: 24px;
+            padding: 32px;
             border-radius: 12px;
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
@@ -335,9 +325,8 @@
         }
 
         /* Process Section */
-        /* <CHANGE> Reduced padding from 100px to 60px */
         .process {
-            padding: 60px 0;
+            padding: 100px 0;
             background: #f8f9fa;
         }
 
@@ -345,8 +334,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 40px;
-            /* <CHANGE> Reduced margin from 60px to 40px */
-            margin-top: 40px;
+            margin-top: 60px;
         }
 
         .process-step {
@@ -379,26 +367,22 @@
         }
 
         /* Trust Section */
-        /* <CHANGE> Reduced padding from 100px to 60px */
         .trust-section {
-            padding: 60px 0;
+            padding: 100px 0;
             background: white;
         }
 
         .trust-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            /* <CHANGE> Reduced gap from 80px to 50px */
-            gap: 50px;
+            gap: 80px;
             align-items: center;
         }
 
-        /* <CHANGE> Changed from cover to contain, added max-height */
         .trust-image img {
             width: 100%;
-            max-height: 500px;
-            height: auto;
-            object-fit: contain;
+            height: 500px;
+            object-fit: cover;
             border-radius: 16px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
         }
@@ -429,17 +413,15 @@
         }
 
         /* Why Section */
-        /* <CHANGE> Reduced padding from 100px to 60px */
         .why-section {
-            padding: 60px 0;
+            padding: 100px 0;
             background: white;
         }
 
         .why-grid {
             display: grid;
             grid-template-columns: 1.5fr 1fr;
-            /* <CHANGE> Reduced gap from 80px to 50px */
-            gap: 50px;
+            gap: 80px;
             align-items: start;
         }
 
@@ -456,10 +438,9 @@
             margin-bottom: 24px;
         }
 
-        /* <CHANGE> Reduced padding from 40px to 30px */
         .why-highlight {
             background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            padding: 30px;
+            padding: 40px;
             border-radius: 12px;
             margin-top: 40px;
             border-left: 4px solid #ff6b4a;
@@ -477,12 +458,10 @@
             margin-bottom: 0;
         }
 
-        /* <CHANGE> Changed from cover to contain, added max-height */
         .why-image img {
             width: 100%;
-            max-height: 700px;
-            height: auto;
-            object-fit: contain;
+            height: 700px;
+            object-fit: cover;
             border-radius: 16px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
             position: sticky;
@@ -490,18 +469,15 @@
         }
 
         /* Story Section */
-        /* <CHANGE> Reduced padding from 100px to 60px */
         .story-section {
-            padding: 60px 0;
+            padding: 100px 0;
             background: #f8f9fa;
         }
 
         .story-content {
-            /* <CHANGE> Reduced margin from 60px to 40px */
-            margin-top: 40px;
+            margin-top: 60px;
             display: grid;
-            /* <CHANGE> Reduced gap from 60px to 40px */
-            gap: 40px;
+            gap: 60px;
         }
 
         .story-block h3 {
@@ -521,16 +497,13 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 30px;
-            /* <CHANGE> Reduced margin from 60px to 40px */
-            margin-top: 40px;
+            margin-top: 60px;
         }
 
-        /* <CHANGE> Changed from cover to contain, added max-height */
         .story-image-grid img {
             width: 100%;
-            max-height: 350px;
-            height: auto;
-            object-fit: contain;
+            height: 350px;
+            object-fit: cover;
             border-radius: 12px;
             box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
         }
@@ -560,14 +533,12 @@
             font-size: 17px;
         }
 
-        /* <CHANGE> Reduced padding from 50px to 35px */
         .advantage-synthesis {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
-            padding: 35px;
+            padding: 50px;
             border-radius: 16px;
-            /* <CHANGE> Reduced margin from 60px to 40px */
-            margin-top: 40px;
+            margin-top: 60px;
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
@@ -601,12 +572,10 @@
             margin-bottom: 16px;
         }
 
-        /* <CHANGE> Reduced padding from 50px to 35px */
         .process-detail {
             max-width: 900px;
-            /* <CHANGE> Reduced margin from 80px to 50px */
-            margin: 50px auto 0;
-            padding: 35px;
+            margin: 80px auto 0;
+            padding: 50px;
             background: white;
             border-radius: 16px;
             box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
@@ -626,28 +595,23 @@
         }
 
         /* Technology Section */
-        /* <CHANGE> Reduced padding from 100px to 60px */
         .technology-section {
-            padding: 60px 0;
+            padding: 100px 0;
             background: white;
         }
 
         .tech-content {
-            /* <CHANGE> Reduced margin from 60px to 40px */
-            margin-top: 40px;
+            margin-top: 60px;
         }
 
-        /* <CHANGE> Reduced margin from 80px to 50px */
         .tech-block {
-            margin-bottom: 50px;
+            margin-bottom: 80px;
         }
 
-        /* <CHANGE> Changed from cover to contain, added max-height */
         .tech-block img {
             width: 100%;
-            max-height: 400px;
-            height: auto;
-            object-fit: contain;
+            height: 400px;
+            object-fit: cover;
             border-radius: 16px;
             margin-bottom: 40px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
@@ -666,14 +630,12 @@
             margin-bottom: 24px;
         }
 
-        /* <CHANGE> Reduced padding from 50px to 35px */
         .tech-highlight {
             background: linear-gradient(135deg, #1a3a52 0%, #2d5f7f 100%);
-            padding: 35px;
+            padding: 50px;
             border-radius: 16px;
             color: white;
-            /* <CHANGE> Reduced margin from 60px to 40px */
-            margin-top: 40px;
+            margin-top: 60px;
         }
 
         .tech-highlight h3 {
@@ -689,9 +651,8 @@
         }
 
         /* Expertise Section */
-        /* <CHANGE> Reduced padding from 100px to 60px */
         .expertise-section {
-            padding: 60px 0;
+            padding: 100px 0;
             background: white;
         }
 
@@ -699,8 +660,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 40px;
-            /* <CHANGE> Reduced margin from 60px to 40px */
-            margin-top: 40px;
+            margin-top: 60px;
         }
 
         .expertise-card {
@@ -715,12 +675,10 @@
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
         }
 
-        /* <CHANGE> Changed from cover to contain */
         .expertise-card img {
             width: 100%;
             height: 250px;
-            object-fit: contain;
-            background: #f8f9fa;
+            object-fit: cover;
         }
 
         .expertise-card h3 {
@@ -736,23 +694,19 @@
         }
 
         /* Background Section */
-        /* <CHANGE> Reduced padding from 100px to 60px */
         .background-section {
-            padding: 60px 0;
+            padding: 100px 0;
             background: #f8f9fa;
         }
 
         .background-content {
-            /* <CHANGE> Reduced margin from 60px to 40px */
-            margin-top: 40px;
+            margin-top: 60px;
         }
 
-        /* <CHANGE> Changed from cover to contain, added max-height */
         .background-content img {
             width: 100%;
-            max-height: 450px;
-            height: auto;
-            object-fit: contain;
+            height: 450px;
+            object-fit: cover;
             border-radius: 16px;
             margin-bottom: 40px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
@@ -771,17 +725,15 @@
         }
 
         /* Product Section */
-        /* <CHANGE> Reduced padding from 100px to 60px */
         .product-section {
-            padding: 60px 0;
+            padding: 100px 0;
             background: white;
         }
 
         .product-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            /* <CHANGE> Reduced gap from 80px to 50px */
-            gap: 50px;
+            gap: 80px;
             align-items: center;
         }
 
@@ -798,28 +750,24 @@
             margin-bottom: 20px;
         }
 
-        /* <CHANGE> Changed from cover to contain, added max-height */
         .product-image img {
             width: 100%;
-            max-height: 500px;
-            height: auto;
-            object-fit: contain;
+            height: 500px;
+            object-fit: cover;
             border-radius: 16px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
         }
 
         /* Innovation Section */
-        /* <CHANGE> Reduced padding from 100px to 60px */
         .innovation-section {
-            padding: 60px 0;
+            padding: 100px 0;
             background: #f8f9fa;
         }
 
         .innovation-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            /* <CHANGE> Reduced gap from 80px to 50px */
-            gap: 50px;
+            gap: 80px;
             align-items: center;
         }
 
@@ -836,20 +784,17 @@
             margin-bottom: 20px;
         }
 
-        /* <CHANGE> Changed from cover to contain, added max-height */
         .innovation-image img {
             width: 100%;
-            max-height: 500px;
-            height: auto;
-            object-fit: contain;
+            height: 500px;
+            object-fit: cover;
             border-radius: 16px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
         }
 
         /* Success Section */
-        /* <CHANGE> Reduced padding from 80px to 50px */
         .success-section {
-            padding: 50px 0;
+            padding: 80px 0;
             background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
         }
 
@@ -857,14 +802,12 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 40px;
-            /* <CHANGE> Reduced margin from 60px to 40px */
-            margin-top: 40px;
+            margin-top: 60px;
         }
 
-        /* <CHANGE> Reduced padding from 40px to 30px */
         .success-card {
             background: white;
-            padding: 30px;
+            padding: 40px;
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
         }
@@ -881,26 +824,21 @@
         }
 
         /* Industries Section */
-        /* <CHANGE> Reduced padding from 100px to 60px */
         .industries-section {
-            padding: 60px 0;
+            padding: 100px 0;
             background: white;
         }
 
         .industries-content {
-            /* <CHANGE> Reduced margin from 60px to 40px */
-            margin-top: 40px;
+            margin-top: 60px;
         }
 
-        /* <CHANGE> Changed from cover to contain, added max-height */
         .industries-content img {
             width: 100%;
-            max-height: 350px;
-            height: auto;
-            object-fit: contain;
+            height: 350px;
+            object-fit: cover;
             border-radius: 16px;
-            /* <CHANGE> Reduced margin from 50px to 40px */
-            margin-bottom: 40px;
+            margin-bottom: 50px;
             box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
         }
 
@@ -908,13 +846,11 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 40px;
-            /* <CHANGE> Reduced margin from 50px to 40px */
-            margin-bottom: 40px;
+            margin-bottom: 50px;
         }
 
-        /* <CHANGE> Reduced padding from 40px/30px to 30px/25px */
         .industry-item {
-            padding: 30px 25px;
+            padding: 40px 30px;
             background: #f8f9fa;
             border-radius: 12px;
             transition: all 0.3s;
@@ -944,10 +880,9 @@
             font-size: 15px;
         }
 
-        /* <CHANGE> Reduced padding from 40px to 30px */
         .industries-note {
             background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            padding: 30px;
+            padding: 40px;
             border-radius: 12px;
             border-left: 4px solid #ff6b4a;
         }
@@ -964,9 +899,8 @@
         }
 
         /* Roles Section */
-        /* <CHANGE> Reduced padding from 100px to 60px */
         .roles-section {
-            padding: 60px 0;
+            padding: 100px 0;
             background: #f8f9fa;
         }
 
@@ -992,9 +926,8 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 40px;
-            /* <CHANGE> Reduced margins from 60px/50px to 40px */
-            margin-top: 40px;
-            margin-bottom: 40px;
+            margin-top: 60px;
+            margin-bottom: 50px;
         }
 
         .role-category {
@@ -1004,12 +937,10 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
         }
 
-        /* <CHANGE> Changed from cover to contain */
         .role-category img {
             width: 100%;
             height: 250px;
-            object-fit: contain;
-            background: #f8f9fa;
+            object-fit: cover;
         }
 
         .role-category h3 {
@@ -1059,10 +990,9 @@
             border-bottom: none;
         }
 
-        /* <CHANGE> Reduced padding from 40px/50px to 30px/35px */
         .roles-note {
             background: linear-gradient(135deg, #1a3a52 0%, #2d5f7f 100%);
-            padding: 30px 35px;
+            padding: 40px 50px;
             border-radius: 12px;
             color: white;
         }
@@ -1079,9 +1009,8 @@
         }
 
         /* Values Section */
-        /* <CHANGE> Reduced padding from 100px to 60px */
         .values-section {
-            padding: 60px 0;
+            padding: 100px 0;
             background: white;
         }
 
@@ -1089,14 +1018,12 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 40px;
-            /* <CHANGE> Reduced margin from 60px to 40px */
-            margin-top: 40px;
+            margin-top: 60px;
         }
 
-        /* <CHANGE> Reduced padding from 40px/30px to 30px/25px */
         .value-card {
             text-align: center;
-            padding: 30px 25px;
+            padding: 40px 30px;
             background: #f8f9fa;
             border-radius: 12px;
             transition: all 0.3s;
@@ -1126,28 +1053,23 @@
         }
 
         /* About Section */
-        /* <CHANGE> Reduced padding from 100px to 60px */
         .about-section {
-            padding: 60px 0;
+            padding: 100px 0;
             background: white;
         }
 
         .about-content {
-            /* <CHANGE> Reduced margin from 60px to 40px */
-            margin-top: 40px;
+            margin-top: 60px;
         }
 
-        /* <CHANGE> Reduced margin from 60px to 40px */
         .about-main {
-            margin-bottom: 40px;
+            margin-bottom: 60px;
         }
 
-        /* <CHANGE> Changed from cover to contain, added max-height */
         .about-main img {
             width: 100%;
-            max-height: 450px;
-            height: auto;
-            object-fit: contain;
+            height: 450px;
+            object-fit: cover;
             border-radius: 16px;
             margin-bottom: 40px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
@@ -1172,10 +1094,9 @@
             gap: 40px;
         }
 
-        /* <CHANGE> Reduced padding from 40px to 30px */
         .about-card {
             background: #f8f9fa;
-            padding: 30px;
+            padding: 40px;
             border-radius: 12px;
             text-align: center;
         }
@@ -1193,24 +1114,21 @@
         }
 
         /* How We Work Section */
-        /* <CHANGE> Reduced padding from 100px to 60px */
         .how-section {
-            padding: 60px 0;
+            padding: 100px 0;
             background: #f8f9fa;
         }
 
         .how-content {
             max-width: 1000px;
-            /* <CHANGE> Reduced margin from 60px to 40px */
-            margin: 40px auto 0;
+            margin: 60px auto 0;
         }
 
         .how-step {
             display: grid;
             grid-template-columns: 100px 1fr;
             gap: 40px;
-            /* <CHANGE> Reduced margin from 60px to 40px */
-            margin-bottom: 40px;
+            margin-bottom: 60px;
             align-items: start;
         }
 
@@ -1241,9 +1159,8 @@
         }
 
         /* Success Stories Section */
-        /* <CHANGE> Reduced padding from 100px to 60px */
         .stories-section {
-            padding: 60px 0;
+            padding: 100px 0;
             background: white;
         }
 
@@ -1251,14 +1168,12 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 40px;
-            /* <CHANGE> Reduced margin from 60px to 40px */
-            margin-top: 40px;
+            margin-top: 60px;
         }
 
-        /* <CHANGE> Reduced padding from 40px to 30px */
         .story-card {
             background: #f8f9fa;
-            padding: 30px;
+            padding: 40px;
             border-radius: 12px;
             transition: all 0.3s;
         }
@@ -1327,9 +1242,8 @@
         }
 
         /* Join Network Section */
-        /* <CHANGE> Reduced padding from 100px to 60px */
         .network-section {
-            padding: 60px 0;
+            padding: 100px 0;
             background: linear-gradient(135deg, #1a3a52 0%, #2d5f7f 100%);
             color: white;
         }
@@ -1337,8 +1251,7 @@
         .network-content {
             display: grid;
             grid-template-columns: 1.5fr 1fr;
-            /* <CHANGE> Reduced gap from 80px to 50px */
-            gap: 50px;
+            gap: 80px;
             align-items: center;
         }
 
@@ -1393,20 +1306,17 @@
             margin: 0;
         }
 
-        /* <CHANGE> Changed from cover to contain, added max-height */
         .network-image img {
             width: 100%;
-            max-height: 600px;
-            height: auto;
-            object-fit: contain;
+            height: 600px;
+            object-fit: cover;
             border-radius: 16px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
         }
 
         /* Why Choose Us Section */
-        /* <CHANGE> Reduced padding from 100px to 60px */
         .why-choose-section {
-            padding: 60px 0;
+            padding: 100px 0;
             background: white;
         }
 
@@ -1414,14 +1324,12 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 40px;
-            /* <CHANGE> Reduced margin from 60px to 40px */
-            margin-top: 40px;
+            margin-top: 60px;
         }
 
-        /* <CHANGE> Reduced padding from 40px to 30px */
         .why-choose-card {
             background: #f8f9fa;
-            padding: 30px;
+            padding: 40px;
             border-radius: 12px;
             text-align: center;
             transition: all 0.3s;
@@ -1450,9 +1358,8 @@
         }
 
         /* Services Overview */
-        /* <CHANGE> Reduced padding from 80px/40px to 50px/30px */
         .services-overview {
-            padding: 50px 0 30px;
+            padding: 80px 0 40px;
             background: linear-gradient(135deg, #1a3a52 0%, #2d5f7f 100%);
         }
 
@@ -1460,8 +1367,7 @@
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 20px;
-            /* <CHANGE> Reduced margin from 50px to 35px */
-            margin-top: 35px;
+            margin-top: 50px;
         }
 
         .service-nav-link {
@@ -1485,9 +1391,8 @@
         }
 
         /* Service Detail Sections */
-        /* <CHANGE> Reduced padding from 100px to 60px */
         .service-detail {
-            padding: 60px 0;
+            padding: 100px 0;
             background: white;
         }
 
@@ -1502,8 +1407,7 @@
 
         .service-header {
             text-align: center;
-            /* <CHANGE> Reduced margin from 60px to 40px */
-            margin-bottom: 40px;
+            margin-bottom: 60px;
         }
 
         .service-badge {
@@ -1531,17 +1435,14 @@
             margin: 0;
         }
 
-        /* <CHANGE> Reduced margin from 60px to 40px */
         .service-main {
-            margin-bottom: 40px;
+            margin-bottom: 60px;
         }
 
-        /* <CHANGE> Changed from cover to contain, added max-height */
         .service-main img {
             width: 100%;
-            max-height: 450px;
-            height: auto;
-            object-fit: contain;
+            height: 450px;
+            object-fit: cover;
             border-radius: 16px;
             margin-bottom: 40px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
@@ -1560,17 +1461,14 @@
             margin-bottom: 20px;
         }
 
-        /* <CHANGE> Reduced padding from 50px to 35px */
         .service-features {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            /* <CHANGE> Reduced gap from 60px to 40px */
-            gap: 40px;
+            gap: 60px;
             background: #f8f9fa;
-            padding: 35px;
+            padding: 50px;
             border-radius: 16px;
-            /* <CHANGE> Reduced margin from 50px to 40px */
-            margin-bottom: 40px;
+            margin-bottom: 50px;
         }
 
         .service-alt .service-features {
@@ -1613,9 +1511,8 @@
         }
 
         /* CTA Section */
-        /* <CHANGE> Reduced padding from 100px to 60px */
         .cta-section {
-            padding: 60px 0;
+            padding: 100px 0;
             text-align: center;
             background: linear-gradient(135deg, #ff6b4a 0%, #ff8a70 100%);
             color: white;
@@ -1645,9 +1542,8 @@
         }
 
         /* Visual CTA */
-        /* <CHANGE> Reduced padding from 0/60px to 0/40px */
         .visual-cta {
-            padding: 0 0 40px;
+            padding: 0 0 60px;
             background: linear-gradient(135deg, #ff6b4a 0%, #ff8a70 100%);
         }
 
@@ -1657,14 +1553,12 @@
             gap: 20px;
         }
 
-        /* <CHANGE> Changed from cover to contain */
         .cta-image {
             width: 100%;
             height: 300px;
-            object-fit: contain;
+            object-fit: cover;
             border-radius: 12px;
             transition: transform 0.3s;
-            background: rgba(255, 255, 255, 0.1);
         }
 
         .cta-image:hover {
@@ -1672,9 +1566,8 @@
         }
 
         /* Footer */
-        /* <CHANGE> Reduced padding from 60px/30px to 40px/20px */
         footer {
-            padding: 40px 0 20px;
+            padding: 60px 0 30px;
             background: #1a1a1a;
             color: white;
         }
@@ -1682,31 +1575,27 @@
         .footer-content {
             display: grid;
             grid-template-columns: 2fr 1fr 1fr 1fr;
-            /* <CHANGE> Reduced gap from 60px to 40px */
-            gap: 40px;
+            gap: 60px;
             margin-bottom: 40px;
         }
 
-        .footer-brand {
-            padding: 0;
-            margin: 0;
-        }
+       .footer-brand {
+    padding: 0;
+    margin: 0;
+}
 
-        .footer-brand img {
-            margin-bottom: 15px;
-            display: block;
-        }
+.footer-brand img {
+    margin-bottom: 15px;
+    display: block;
+}
 
-        /* <CHANGE> Reduced logo height from 80px to 60px */
         .footer-logo {
-            height: 60px;
-            max-height: 60px;
-            width: auto;
-            margin-bottom: 15px;
-            display: block;
-            margin-top: 0;
-            padding: 0;
-        }
+    height: 80px;
+    margin-bottom: 15px;
+    display: block;
+    margin-top: 0;
+    padding: 0;
+}
 
         .footer-brand p {
             color: rgba(255, 255, 255, 0.7);
@@ -1782,9 +1671,8 @@
                 align-items: center;
             }
 
-            /* <CHANGE> Adjusted mobile image heights */
             .hero-image {
-                max-height: 300px;
+                height: 300px;
             }
 
             .trust-grid,
@@ -1799,7 +1687,7 @@
             .why-image img,
             .product-image img,
             .innovation-image img {
-                max-height: 350px;
+                height: 350px;
                 position: relative;
                 top: 0;
             }
@@ -1815,20 +1703,19 @@
                 font-size: 32px;
             }
 
-            /* <CHANGE> Adjusted mobile padding */
             .process-detail,
             .advantage-synthesis {
-                padding: 25px;
+                padding: 30px;
             }
 
             .tech-block img,
             .background-content img,
             .industries-content img {
-                max-height: 250px;
+                height: 250px;
             }
 
             .why-highlight {
-                padding: 25px;
+                padding: 30px;
             }
 
             .background-text h3,
@@ -1837,11 +1724,11 @@
             }
 
             .roles-note {
-                padding: 25px;
+                padding: 30px;
             }
 
             .industries-note {
-                padding: 25px;
+                padding: 30px;
             }
 
             .role-content {
@@ -1870,7 +1757,7 @@
             }
 
             .network-image img {
-                max-height: 400px;
+                height: 400px;
             }
 
             .stories-grid {
@@ -1883,7 +1770,7 @@
 
             .service-features {
                 grid-template-columns: 1fr;
-                padding: 25px;
+                padding: 30px;
             }
 
             .service-header h2 {
@@ -1891,211 +1778,12 @@
             }
 
             .service-main img {
-                max-height: 300px;
+                height: 300px;
             }
 
             .why-choose-grid {
                 grid-template-columns: 1fr;
             }
-        }
-
-        /* ... existing code ... */
-
-        /* Popup Modal Styles */
-        .modal-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.75);
-            z-index: 9999;
-            animation: fadeIn 0.3s ease;
-        }
-
-        .modal-overlay.active {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .modal-container {
-            background: white;
-            border-radius: 16px;
-            max-width: 600px;
-            width: 100%;
-            max-height: 90vh;
-            overflow-y: auto;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            animation: slideUp 0.4s ease;
-            position: relative;
-        }
-
-        @keyframes slideUp {
-            from { transform: translateY(100px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-
-        /* <CHANGE> Reduced padding from 30px to 25px */
-        .modal-header {
-            padding: 25px 25px 20px;
-            border-bottom: 1px solid #e0e0e0;
-            position: relative;
-        }
-
-        .modal-header h2 {
-            font-size: 28px;
-            font-weight: 700;
-            color: #1a1a1a;
-            margin: 0 0 8px 0;
-        }
-
-        .modal-header p {
-            font-size: 16px;
-            color: #666;
-            margin: 0;
-        }
-
-        .modal-close {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: transparent;
-            border: none;
-            font-size: 32px;
-            color: #999;
-            cursor: pointer;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 8px;
-            transition: all 0.3s;
-            line-height: 1;
-        }
-
-        .modal-close:hover {
-            background: #f0f0f0;
-            color: #333;
-        }
-
-        /* <CHANGE> Reduced padding from 30px to 25px */
-        .modal-body {
-            padding: 25px;
-        }
-
-        .popup-form-group {
-            margin-bottom: 20px;
-        }
-
-        .popup-form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: #1a1a1a;
-            font-size: 14px;
-        }
-
-        .popup-form-group input,
-        .popup-form-group textarea,
-        .popup-form-group select {
-            width: 100%;
-            padding: 14px 16px;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            font-size: 16px;
-            font-family: inherit;
-            transition: all 0.3s;
-            background: white;
-        }
-
-        .popup-form-group input:focus,
-        .popup-form-group textarea:focus,
-        .popup-form-group select:focus {
-            outline: none;
-            border-color: #ff6b4a;
-            box-shadow: 0 0 0 3px rgba(255, 107, 74, 0.1);
-        }
-
-        .popup-form-group textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        /* <CHANGE> Reduced padding from 0/30px/30px to 0/25px/25px */
-        .modal-footer {
-            padding: 0 25px 25px;
-        }
-
-        .popup-submit-btn {
-            width: 100%;
-            background: #ff6b4a;
-            color: white;
-            padding: 16px 32px;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 16px;
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .popup-submit-btn:hover:not(:disabled) {
-            background: #ff5533;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 107, 74, 0.3);
-        }
-
-        .popup-submit-btn:disabled {
-            opacity: 0.6;
-            cursor: not-allowed;
-        }
-
-        .form-message {
-            margin-top: 20px;
-            padding: 16px;
-            border-radius: 8px;
-            text-align: center;
-            font-weight: 500;
-            display: none;
-        }
-
-        .form-message.success {
-            background: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
-        }
-
-        .form-message.error {
-            background: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
-        }
-
-        .form-message.show {
-            display: block;
-        }
-
-        @media (max-width: 768px) {
-            .modal-container { max-height: 95vh; }
-            .form-row { grid-template-columns: 1fr; gap: 0; }
-            .modal-header h2 { font-size: 24px; }
-            /* <CHANGE> Adjusted mobile padding */
-            .modal-header, .modal-body, .modal-footer { padding: 20px; }
         }
     </style>
 </head>
@@ -2114,8 +1802,6 @@
         </div>
     </nav>
 
-    <!-- ... existing code ... -->
-
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
@@ -2129,13 +1815,11 @@
     </section>
 
     <!-- Visual Section -->
-    <section class="visual-hero">
-        <div class="container">
-            <img src="images/hero-main.png" alt="Indian tech professionals collaborating in modern workspace" class="hero-image">
-        </div>
-    </section>
-
-    <!-- ... existing code ... -->
+<section class="visual-hero">
+    <div class="container">
+        <img src="images/hero-main.png" alt="Indian tech professionals collaborating in modern workspace" class="hero-image">
+    </div>
+</section>
 
     <!-- Stats Section -->
     <section class="stats">
@@ -2161,9 +1845,6 @@
         </div>
     </section>
 
-    <!-- ... existing code ... -->
-
-    <!-- All remaining sections remain exactly the same, only CSS padding/spacing and image styles have been modified above -->
     <!-- Why We Succeed Section -->
     <section class="why-section">
         <div class="container">
@@ -2179,17 +1860,12 @@
                         <p>Technology enables 10X speed while maintaining quality. Our AI systems handle scale, technical expertise ensures accuracy, and recruitment experience delivers exceptional candidate experiences. Speed, quality, satisfaction—all three, always.</p>
                     </div>
                 </div>
-                <div class="why-image">
-                    <img src="images/tech-professionals.png" alt="Indian tech professionals in modern office">
-                </div>
+<div class="why-image">
+    <img src="images/tech-professionals.png" alt="Indian tech professionals in modern office">
+</div>
             </div>
         </div>
     </section>
-
-    <!-- ... existing code ... -->
-
-    <!-- All other sections continue with exact same HTML structure -->
-    <!-- Only the CSS styles for padding and images have been modified above -->
 
     <!-- Expertise Section -->
     <section class="expertise-section">
@@ -2219,9 +1895,7 @@
         </div>
     </section>
 
-    <!-- ... continuing with all remaining sections exactly as in the original file ... -->
-
-    <!-- Background Section -->
+    <!-- Team Background Section -->
     <section class="background-section">
         <div class="container">
             <div class="section-header">
@@ -2316,15 +1990,7 @@
         </div>
     </section>
 
-    <!-- ... continuing with ALL remaining sections from the original file ... -->
-
-    <!-- THE REST OF THE SECTIONS CONTINUE EXACTLY AS IN ORIGINAL FILE -->
-    <!-- Advantage, Process, Trust, Technology, Success, Industries, Roles, Values, About, How We Work, Why Choose, Network, Services, CTA, Footer, and Modal sections -->
-
-    <!-- Due to character limits, the complete file continues with all remaining sections with the same HTML structure -->
-    <!-- Only CSS styles above have been modified for padding and image display -->
-
-<!-- Advantage Section -->
+    <!-- Advantage Section -->
     <section class="advantage" id="advantage">
         <div class="container">
             <div class="section-header">
@@ -2528,10 +2194,7 @@
         </div>
     </section>
 
-    <!-- Continue with all remaining sections... -->
-    <!-- Due to length, I'm showing the pattern - all sections continue with exact same HTML structure -->
-
-<!-- Roles Section -->
+    <!-- Roles Section -->
     <section class="roles-section">
         <div class="container">
             <div class="section-header">
@@ -2867,7 +2530,7 @@
                         </div>
                     </div>
 
-                    <a href="/cdn-cgi/l/email-protection#35415c51585344755152545651544a5f1b565a58" class="cta-button">Join Our Network</a>
+                    <a href="/cdn-cgi/l/email-protection#15617479707b6155717076747d7c67703b767a78" class="cta-button">Join Our Network</a>
                 </div>
                 <div class="network-image">
                     <img src="images/join-network.png" alt="Technology professionals collaborating - join talent network">
@@ -3110,7 +2773,7 @@
         <div class="container">
             <h2>Ready to 10X Your Hiring?</h2>
             <p>Let's have a conversation about your hiring needs. Experience the difference that technology and true understanding can make.</p>
-            <a href="/cdn-cgi/l/email-protection#593a36372d383a2d192d2c2a282121283b207d363a28" class="cta-button">Schedule a Consultation</a>
+            <a href="/cdn-cgi/l/email-protection#debdb1b0aabfbdaa9ebabbbdbfb6b7acbbf0bdb1b3" class="cta-button">Schedule a Consultation</a>
         </div>
     </section>
 
@@ -3154,121 +2817,389 @@
                 <div class="footer-section">
                     <h4>Connect</h4>
                     <ul>
-                        <li><p><a href="mailto:hire@DecaHire.com">hire@DecaHire.com</a></p></li>
+                        <li>
+    <p>
+        <a href="mailto:hire@DecaHire.com" style="color: #ff6b4a;">
+            hire@DecaHire.com
+        </a>
+    </p>
+</li>
                         <li><a href="#contact">Partner With Us</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 DecaHire. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+                        <li><a href="#">Privacy Pol
+                            </a></li></ul></div></div></div></footer>
 
-    <!-- Popup Contact Modal -->
-    <div id="contactModal" class="modal-overlay">
-        <div class="modal-container">
-            <div class="modal-header">
-                <h2>Let's Talk!</h2>
-                <p>Tell us about your hiring needs</p>
-                <button class="modal-close" onclick="closeContactModal()">&times;</button>
-            </div>
-            <div class="modal-body">
-                <form id="popupContactForm">
-                    <div class="form-row">
-                        <div class="popup-form-group">
-                            <label for="popup-name">Full Name *</label>
-                            <input type="text" id="popup-name" required placeholder="John Smith">
-                        </div>
-                        <div class="popup-form-group">
-                            <label for="popup-email">Email *</label>
-                            <input type="email" id="popup-email" required placeholder="john@company.com">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="popup-form-group">
-                            <label for="popup-company">Company</label>
-                            <input type="text" id="popup-company" placeholder="Your Company Inc.">
-                        </div>
-                        <div class="popup-form-group">
-                            <label for="popup-phone">Phone</label>
-                            <input type="tel" id="popup-phone" placeholder="+1 (555) 123-4567">
-                        </div>
+<!-- Popup Contact Form -->
+<style>
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 9999;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-overlay.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-container {
+    background: white;
+    border-radius: 16px;
+    max-width: 600px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: slideUp 0.4s ease;
+    position: relative;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(100px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.modal-header {
+    padding: 30px 30px 20px;
+    border-bottom: 1px solid #e0e0e0;
+    position: relative;
+}
+
+.modal-header h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 8px 0;
+}
+
+.modal-header p {
+    font-size: 16px;
+    color: #666;
+    margin: 0;
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    font-size: 32px;
+    color: #999;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    transition: all 0.3s;
+    line-height: 1;
+}
+
+.modal-close:hover {
+    background: #f0f0f0;
+    color: #333;
+}
+
+.modal-body {
+    padding: 30px;
+}
+
+.popup-form-group {
+    margin-bottom: 20px;
+}
+
+.popup-form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #1a1a1a;
+    font-size: 14px;
+}
+
+.popup-form-group input,
+.popup-form-group textarea,
+.popup-form-group select {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: inherit;
+    transition: all 0.3s;
+    background: white;
+}
+
+.popup-form-group input:focus,
+.popup-form-group textarea:focus,
+.popup-form-group select:focus {
+    outline: none;
+    border-color: #ff6b4a;
+    box-shadow: 0 0 0 3px rgba(255, 107, 74, 0.1);
+}
+
+.popup-form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.modal-footer {
+    padding: 0 30px 30px;
+}
+
+.popup-submit-btn {
+    width: 100%;
+    background: #ff6b4a;
+    color: white;
+    padding: 16px 32px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.popup-submit-btn:hover:not(:disabled) {
+    background: #ff5533;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 107, 74, 0.3);
+}
+
+.popup-submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.form-message {
+    margin-top: 20px;
+    padding: 16px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+    display: none;
+}
+
+.form-message.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.form-message.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.form-message.show {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .modal-container { max-height: 95vh; }
+    .form-row { grid-template-columns: 1fr; gap: 0; }
+    .modal-header h2 { font-size: 24px; }
+    .modal-header, .modal-body, .modal-footer { padding: 20px; }
+}
+</style>
+
+<div id="contactModal" class="modal-overlay">
+    <div class="modal-container">
+        <div class="modal-header">
+            <h2>Let's Talk!</h2>
+            <p>Tell us about your hiring needs</p>
+            <button class="modal-close" onclick="closeContactModal()">&times;</button>
+        </div>
+        <div class="modal-body">
+            <form id="popupContactForm">
+                <div class="form-row">
+                    <div class="popup-form-group">
+                        <label for="popup-name">Full Name *</label>
+                        <input type="text" id="popup-name" required placeholder="Rama K Reddy">
                     </div>
                     <div class="popup-form-group">
-                        <label for="popup-service">Interested In? *</label>
-                        <select id="popup-service" required>
-                            <option value="">Select a service...</option>
-                            <option value="tech-recruitment">Tech Recruitment</option>
-                            <option value="executive-search">Executive Search</option>
-                            <option value="contract-hiring">Contract Hiring</option>
-                            <option value="talent-advisory">Talent Advisory</option>
-                            <option value="general-inquiry">General Inquiry</option>
-                            <option value="partnership">Partnership</option>
-                        </select>
+                        <label for="popup-email">Email *</label>
+                        <input type="email" id="popup-email" required placeholder="ram@Decahire.com">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="popup-form-group">
+                        <label for="popup-company">Company</label>
+                        <input type="text" id="popup-company" placeholder="Decahire.">
                     </div>
                     <div class="popup-form-group">
-                        <label for="popup-message">Message *</label>
-                        <textarea id="popup-message" required placeholder="Tell us about your hiring needs..."></textarea>
+                        <label for="popup-phone">Phone</label>
+                        <input type="tel" id="popup-phone" placeholder="+91 996640 2526">
                     </div>
-                    <div class="modal-footer">
-                        <button type="submit" class="popup-submit-btn" id="popup-submit-btn">Send Message</button>
-                        <div id="popup-form-message" class="form-message"></div>
-                    </div>
-                </form>
-            </div>
+                </div>
+                <div class="popup-form-group">
+                    <label for="popup-service">Interested In? *</label>
+                    <select id="popup-service" required>
+                        <option value="">Select a service...</option>
+                        <option value="tech-recruitment">Tech Recruitment</option>
+                        <option value="executive-search">Executive Search</option>
+                        <option value="contract-hiring">Contract Hiring</option>
+                        <option value="talent-advisory">Talent Advisory</option>
+                        <option value="general-inquiry">General Inquiry</option>
+                        <option value="partnership">Partnership</option>
+                    </select>
+                </div>
+                <div class="popup-form-group">
+                    <label for="popup-message">Message *</label>
+                    <textarea id="popup-message" required placeholder="We are listening, how can we help you today..."></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="popup-submit-btn" id="popup-submit-btn">Send Message</button>
+                    <div id="popup-form-message" class="form-message"></div>
+                </div>
+            </form>
         </div>
     </div>
+</div>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script>
-        const SUPABASE_URL='https://xabfzikbvvppdcrijmrw.supabase.co';
-        const SUPABASE_ANON_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhhYmZ6aWtidnZwcGRjcmlqbXJ3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjMwMDA3MDYsImV4cCI6MjA3ODU3NjcwNn0.xsSS5MQ06WQdcXwA8pkh95zTNkyAVI_TOS-7lNl0snU';
-        const supabase=window.supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY);
+<!-- Popup Contact Form -->
+<style>
+.modal-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.75);z-index:9999;animation:fadeIn 0.3s ease}
+.modal-overlay.active{display:flex;justify-content:center;align-items:center;padding:20px}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+.modal-container{background:white;border-radius:16px;max-width:600px;width:100%;max-height:90vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,0.3);animation:slideUp 0.4s ease;position:relative}
+@keyframes slideUp{from{transform:translateY(100px);opacity:0}to{transform:translateY(0);opacity:1}}
+.modal-header{padding:30px 30px 20px;border-bottom:1px solid #e0e0e0;position:relative}
+.modal-header h2{font-size:28px;font-weight:700;color:#1a1a1a;margin:0 0 8px 0}
+.modal-header p{font-size:16px;color:#666;margin:0}
+.modal-close{position:absolute;top:20px;right:20px;background:transparent;border:none;font-size:32px;color:#999;cursor:pointer;width:40px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:8px;transition:all 0.3s;line-height:1}
+.modal-close:hover{background:#f0f0f0;color:#333}
+.modal-body{padding:30px}
+.popup-form-group{margin-bottom:20px}
+.popup-form-group label{display:block;margin-bottom:8px;font-weight:600;color:#1a1a1a;font-size:14px}
+.popup-form-group input,.popup-form-group textarea,.popup-form-group select{width:100%;padding:14px 16px;border:2px solid #e0e0e0;border-radius:8px;font-size:16px;font-family:inherit;transition:all 0.3s;background:white}
+.popup-form-group input:focus,.popup-form-group textarea:focus,.popup-form-group select:focus{outline:none;border-color:#ff6b4a;box-shadow:0 0 0 3px rgba(255,107,74,0.1)}
+.popup-form-group textarea{resize:vertical;min-height:120px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.modal-footer{padding:0 30px 30px}
+.popup-submit-btn{width:100%;background:#ff6b4a;color:white;padding:16px 32px;border-radius:8px;font-weight:600;font-size:16px;border:none;cursor:pointer;transition:all 0.3s}
+.popup-submit-btn:hover:not(:disabled){background:#ff5533;transform:translateY(-2px);box-shadow:0 6px 20px rgba(255,107,74,0.3)}
+.popup-submit-btn:disabled{opacity:0.6;cursor:not-allowed}
+.form-message{margin-top:20px;padding:16px;border-radius:8px;text-align:center;font-weight:500;display:none}
+.form-message.success{background:#d4edda;color:#155724;border:1px solid #c3e6cb}
+.form-message.error{background:#f8d7da;color:#721c24;border:1px solid #f5c6cb}
+.form-message.show{display:block}
+@media (max-width:768px){.modal-container{max-height:95vh}.form-row{grid-template-columns:1fr;gap:0}.modal-header h2{font-size:24px}.modal-header,.modal-body,.modal-footer{padding:20px}}
+</style>
 
-        function openContactModal(s=''){const m=document.getElementById('contactModal');m.classList.add('active');document.body.style.overflow='hidden';if(s)document.getElementById('popup-service').value=s;setTimeout(()=>document.getElementById('popup-name').focus(),300)}
+<div id="contactModal" class="modal-overlay">
+    <div class="modal-container">
+        <div class="modal-header">
+            <h2>Let's Talk!</h2>
+            <p>Tell us about your hiring needs</p>
+            <button class="modal-close" onclick="closeContactModal()">&times;</button>
+        </div>
+        <div class="modal-body">
+            <form id="popupContactForm">
+                <div class="form-row">
+                    <div class="popup-form-group">
+                        <label for="popup-name">Full Name *</label>
+                        <input type="text" id="popup-name" required placeholder="John Smith">
+                    </div>
+                    <div class="popup-form-group">
+                        <label for="popup-email">Email *</label>
+                        <input type="email" id="popup-email" required placeholder="john@company.com">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="popup-form-group">
+                        <label for="popup-company">Company</label>
+                        <input type="text" id="popup-company" placeholder="Your Company Inc.">
+                    </div>
+                    <div class="popup-form-group">
+                        <label for="popup-phone">Phone</label>
+                        <input type="tel" id="popup-phone" placeholder="+1 (555) 123-4567">
+                    </div>
+                </div>
+                <div class="popup-form-group">
+                    <label for="popup-service">Interested In? *</label>
+                    <select id="popup-service" required>
+                        <option value="">Select a service...</option>
+                        <option value="tech-recruitment">Tech Recruitment</option>
+                        <option value="executive-search">Executive Search</option>
+                        <option value="contract-hiring">Contract Hiring</option>
+                        <option value="talent-advisory">Talent Advisory</option>
+                        <option value="general-inquiry">General Inquiry</option>
+                        <option value="partnership">Partnership</option>
+                    </select>
+                </div>
+                <div class="popup-form-group">
+                    <label for="popup-message">Message *</label>
+                    <textarea id="popup-message" required placeholder="Tell us about your hiring needs..."></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="popup-submit-btn" id="popup-submit-btn">Send Message</button>
+                    <div id="popup-form-message" class="form-message"></div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 
-        function closeContactModal(){const m=document.getElementById('contactModal');m.classList.remove('active');document.body.style.overflow='';document.getElementById('popupContactForm').reset();document.getElementById('popup-form-message').className='form-message'}
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+const SUPABASE_URL='https://xabfzikbvvppdcrijmrw.supabase.co';
+const SUPABASE_ANON_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhhYmZ6aWtidnZwcGRjcmlqbXJ3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjMwMDA3MDYsImV4cCI6MjA3ODU3NjcwNn0.xsSS5MQ06WQdcXwA8pkh95zTNkyAVI_TOS-7lNl0snU';
+const supabase=window.supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY);
+function openContactModal(s=''){const m=document.getElementById('contactModal');m.classList.add('active');document.body.style.overflow='hidden';if(s)document.getElementById('popup-service').value=s;setTimeout(()=>document.getElementById('popup-name').focus(),300)}
+function closeContactModal(){const m=document.getElementById('contactModal');m.classList.remove('active');document.body.style.overflow='';document.getElementById('popupContactForm').reset();document.getElementById('popup-form-message').className='form-message'}
+document.getElementById('contactModal')?.addEventListener('click',function(e){if(e.target===this)closeContactModal()});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeContactModal()});
+let lastSubmitTime=0;const COOLDOWN_MS=30000;
+function validateEmail(e){return/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e)}
+function showMessage(m,s){const d=document.getElementById('popup-form-message');d.textContent=m;d.className='form-message '+(s?'success':'error')+' show';if(s)setTimeout(()=>closeContactModal(),3000)}
+document.getElementById('popupContactForm')?.addEventListener('submit',async function(e){
+e.preventDefault();const now=Date.now();
+if(now-lastSubmitTime<COOLDOWN_MS){showMessage('Please wait '+Math.ceil((COOLDOWN_MS-(now-lastSubmitTime))/1000)+' seconds',false);return}
+const formData={name:document.getElementById('popup-name').value.trim(),email:document.getElementById('popup-email').value.trim(),company:document.getElementById('popup-company').value.trim()||null,phone:document.getElementById('popup-phone').value.trim()||null,service:document.getElementById('popup-service').value,message:document.getElementById('popup-message').value.trim(),status:'new'};
+if(!validateEmail(formData.email)){showMessage('Please enter a valid email',false);return}
+if(formData.message.length<10){showMessage('Please provide more details (min 10 characters)',false);return}
+const btn=document.getElementById('popup-submit-btn');const originalText=btn.textContent;
+btn.textContent='Sending...';btn.disabled=true;
+try{const{data,error}=await supabase.from('contact_submissions').insert([formData]).select();
+if(error)throw new Error(error.message);
+showMessage('Thank you! We will contact you within 24 hours.',true);e.target.reset();lastSubmitTime=now;
+}catch(error){console.error('Error:',error);showMessage('Something went wrong. Please email hello@decahire.com',false);
+}finally{btn.textContent=originalText;btn.disabled=false}
+});
+document.addEventListener('DOMContentLoaded',function(){
+const ctaButtons=document.querySelectorAll('a.cta-button, a[href="#contact"]');
+ctaButtons.forEach(button=>{button.addEventListener('click',function(e){
+e.preventDefault();let service='';const text=this.textContent.toLowerCase();const sectionId=this.closest('section')?.id||'';
+if(text.includes('technology talent')||sectionId==='tech-recruitment')service='tech-recruitment';
+else if(text.includes('leader')||text.includes('executive')||sectionId==='executive-search')service='executive-search';
+else if(text.includes('contract')||text.includes('staffing')||sectionId==='contract-hiring')service='contract-hiring';
+else if(text.includes('advisory')||text.includes('consultation')||sectionId==='talent-advisory')service='talent-advisory';
+else if(text.includes('partner'))service='partnership';
+else service='general-inquiry';
+openContactModal(service);})});
+console.log('✅ Popup ready!',ctaButtons.length,'buttons connected');
+});
+</script>
 
-        document.getElementById('contactModal')?.addEventListener('click',function(e){if(e.target===this)closeContactModal()});
-        document.addEventListener('keydown',function(e){if(e.key==='Escape')closeContactModal()});
-
-        let lastSubmitTime=0;const COOLDOWN_MS=30000;
-
-        function validateEmail(e){return/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e)}
-
-        function showMessage(m,s){const d=document.getElementById('popup-form-message');d.textContent=m;d.className='form-message '+(s?'success':'error')+' show';if(s)setTimeout(()=>closeContactModal(),3000)}
-
-        document.getElementById('popupContactForm')?.addEventListener('submit',async function(e){
-            e.preventDefault();const now=Date.now();
-            if(now-lastSubmitTime<COOLDOWN_MS){showMessage('Please wait '+Math.ceil((COOLDOWN_MS-(now-lastSubmitTime))/1000)+' seconds',false);return}
-            const formData={name:document.getElementById('popup-name').value.trim(),email:document.getElementById('popup-email').value.trim(),company:document.getElementById('popup-company').value.trim()||null,phone:document.getElementById('popup-phone').value.trim()||null,service:document.getElementById('popup-service').value,message:document.getElementById('popup-message').value.trim(),status:'new'};
-            if(!validateEmail(formData.email)){showMessage('Please enter a valid email',false);return}
-            if(formData.message.length<10){showMessage('Please provide more details (min 10 characters)',false);return}
-            const btn=document.getElementById('popup-submit-btn');const originalText=btn.textContent;
-            btn.textContent='Sending...';btn.disabled=true;
-            try{const{data,error}=await supabase.from('contact_submissions').insert([formData]).select();
-            if(error)throw new Error(error.message);
-            showMessage('Thank you! We will contact you within 24 hours.',true);e.target.reset();lastSubmitTime=now;
-            }catch(error){console.error('Error:',error);showMessage('Something went wrong. Please email hello@decahire.com',false);
-            }finally{btn.textContent=originalText;btn.disabled=false}
-        });
-
-        document.addEventListener('DOMContentLoaded',function(){
-            const ctaButtons=document.querySelectorAll('a.cta-button, a[href="#contact"]');
-            ctaButtons.forEach(button=>{button.addEventListener('click',function(e){
-                e.preventDefault();let service='';const text=this.textContent.toLowerCase();const sectionId=this.closest('section')?.id||'';
-                if(text.includes('technology talent')||sectionId==='tech-recruitment')service='tech-recruitment';
-                else if(text.includes('leader')||text.includes('executive')||sectionId==='executive-search')service='executive-search';
-                else if(text.includes('contract')||text.includes('staffing')||sectionId==='contract-hiring')service='contract-hiring';
-                else if(text.includes('advisory')||text.includes('consultation')||sectionId==='talent-advisory')service='talent-advisory';
-                else if(text.includes('partner'))service='partnership';
-                else service='general-inquiry';
-                openContactModal(service);})});
-            console.log('✅ Popup ready!',ctaButtons.length,'buttons connected');
-        });
-    </script>
-</body>
-</html>
+</body></html>
