@@ -131,7 +131,7 @@ nav .container {
 .hero-image {
     width: 100%;
     max-height: 600px;
-    object-fit: contain;
+    object-fit: cover;
     border-radius: 16px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
     display: block;
@@ -653,7 +653,7 @@ nav .container {
     width: 100%;
     height: auto;
     max-height: 400px;
-    object-fit: contain;
+    object-fit: cover;
     border-radius: 16px;
     margin-bottom: 40px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
@@ -752,8 +752,8 @@ nav .container {
 .background-content img {
     width: 100%;
     height: auto;
-    max-height: 450px;
-    object-fit: contain;
+    max-height: 500px;
+    object-fit: cover;
     border-radius: 16px;
     margin-bottom: 40px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
@@ -894,7 +894,7 @@ nav .container {
     width: 100%;
     height: auto;
     max-height: 350px;
-    object-fit: contain;
+    object-fit: cover;
     border-radius: 16px;
     margin-bottom: 40px;
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
@@ -1134,7 +1134,7 @@ nav .container {
     width: 100%;
     height: auto;
     max-height: 450px;
-    object-fit: contain;
+    object-fit: cover;
     border-radius: 16px;
     margin-bottom: 40px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
@@ -1518,7 +1518,7 @@ nav .container {
     width: 100%;
     height: auto;
     max-height: 400px;
-    object-fit: contain;
+    object-fit: cover;
     border-radius: 16px;
     margin-bottom: 40px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
