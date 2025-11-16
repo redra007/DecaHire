@@ -1900,6 +1900,243 @@ footer {
 }
 
 /* ==========================================
+   AGGRESSIVE WHITE SPACE REDUCTION
+   ========================================== */
+
+/* Reduce ALL section padding */
+.hero {
+    padding: 40px 0 20px !important;
+}
+
+.visual-hero {
+    padding: 20px 0 30px !important;
+}
+
+.stats {
+    padding: 30px 0 !important;
+}
+
+.features,
+.advantage,
+.process,
+.trust-section,
+.why-section,
+.story-section,
+.technology-section,
+.expertise-section,
+.background-section,
+.product-section,
+.innovation-section,
+.success-section,
+.industries-section,
+.roles-section,
+.values-section,
+.about-section,
+.how-section,
+.stories-section,
+.network-section,
+.why-choose-section,
+.service-detail,
+.cta-section {
+    padding: 40px 0 !important;
+}
+
+.services-overview {
+    padding: 30px 0 20px !important;
+}
+
+/* Reduce section header margins */
+.section-header {
+    margin-bottom: 30px !important;  /* Was 60px */
+}
+
+.section-header h2 {
+    margin-bottom: 12px !important;  /* Was 16px */
+}
+
+/* Reduce internal spacing */
+.advantage-intro,
+.process-intro,
+.roles-intro {
+    margin: 20px auto 30px !important;  /* Reduced */
+}
+
+.advantage-grid,
+.features-grid,
+.process-steps,
+.expertise-grid,
+.industries-grid,
+.roles-grid,
+.values-grid,
+.success-grid,
+.stories-grid,
+.why-choose-grid {
+    margin-top: 30px !important;  /* Was 50px */
+}
+
+.advantage-synthesis {
+    margin-top: 30px !important;  /* Was 50px */
+    padding: 30px !important;  /* Was 40px */
+}
+
+.process-detail {
+    margin: 40px auto 0 !important;  /* Was 60px */
+    padding: 30px !important;  /* Was 40px */
+}
+
+.tech-highlight {
+    margin-top: 30px !important;  /* Was 50px */
+    padding: 30px !important;  /* Was 40px */
+}
+
+.why-highlight {
+    margin-top: 30px !important;  /* Was 40px */
+    padding: 30px !important;  /* Was 40px */
+}
+
+/* Reduce spacing in content blocks */
+.trust-content h2,
+.why-content h2,
+.product-content h2,
+.innovation-content h2,
+.network-text h2 {
+    margin-bottom: 20px !important;  /* Was 24px */
+}
+
+.trust-content p,
+.why-content p,
+.product-content p,
+.innovation-content p {
+    margin-bottom: 16px !important;  /* Was 20-24px */
+}
+
+/* Reduce image margins */
+.hero-image,
+.trust-image img,
+.why-image img,
+.product-image img,
+.innovation-image img,
+.network-image img,
+.tech-block img,
+.background-content img,
+.industries-content img,
+.about-main img,
+.service-main img {
+    margin-bottom: 30px !important;  /* Was 40px */
+}
+
+/* Tighter grid gaps */
+.features-grid,
+.advantage-grid,
+.expertise-grid,
+.success-grid,
+.why-choose-grid {
+    gap: 30px !important;  /* Was 40-50px */
+}
+
+.industries-grid,
+.roles-grid,
+.values-grid {
+    gap: 30px !important;  /* Was 40px */
+}
+
+.stories-grid {
+    gap: 30px !important;  /* Was 40px */
+}
+
+/* Reduce padding in cards */
+.feature-card,
+.advantage-card,
+.success-card,
+.value-card,
+.why-choose-card,
+.story-card,
+.about-card {
+    padding: 30px !important;  /* Was 40px */
+}
+
+.industry-item {
+    padding: 30px 20px !important;  /* Was 40px 30px */
+}
+
+.role-content {
+    padding: 20px 24px 24px !important;  /* Was 24px 30px 30px */
+}
+
+/* Reduce spacing in content sections */
+.about-content,
+.background-content,
+.tech-content,
+.industries-content {
+    margin-top: 30px !important;  /* Was 50px */
+}
+
+.about-main {
+    margin-bottom: 30px !important;  /* Was 50px */
+}
+
+.about-grid {
+    gap: 30px !important;  /* Was 40px */
+}
+
+/* Reduce process step spacing */
+.process-steps {
+    gap: 30px !important;  /* Was 40px */
+}
+
+.how-step {
+    margin-bottom: 30px !important;  /* Was 50px */
+}
+
+/* Reduce service features spacing */
+.service-features {
+    gap: 30px !important;  /* Was 50px */
+    padding: 30px !important;  /* Was 40px */
+    margin-bottom: 30px !important;  /* Was 40px */
+}
+
+.service-main {
+    margin-bottom: 30px !important;  /* Was 50px */
+}
+
+.service-header {
+    margin-bottom: 30px !important;  /* Was 50px */
+}
+
+/* Reduce note/highlight box spacing */
+.industries-note,
+.roles-note {
+    padding: 30px !important;  /* Was 40px */
+}
+
+/* Reduce footer padding */
+footer {
+    padding: 40px 0 20px !important;  /* Was 50px 0 30px */
+}
+
+.footer-content {
+    margin-bottom: 30px !important;  /* Was 40px */
+    gap: 40px !important;  /* Was 50px */
+}
+
+.footer-bottom {
+    padding-top: 20px !important;  /* Was 30px */
+}
+
+/* Reduce CTA section */
+.cta-section h2 {
+    margin-bottom: 20px !important;  /* Was 24px */
+}
+
+.cta-section p {
+    margin-bottom: 30px !important;  /* Was 40px */
+}
+
+.visual-cta {
+    padding: 0 0 30px !important;  /* Was 0 0 50px */
+}
+
+/* ==========================================
    28. RESPONSIVE STYLES
    ========================================== */
 @media (max-width: 768px) {
