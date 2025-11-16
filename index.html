@@ -4,1788 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DecaHire - 10X Your Hiring Speed</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
-            line-height: 1.6;
-            color: #1a1a1a;
-            background: #ffffff;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Navigation */
-        nav {
-            padding: 20px 0;
-            position: sticky;
-            top: 0;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            border-bottom: 1px solid #f0f0f0;
-        }
-
-        nav .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-    height: 80px;
-    display: block;
-    margin: 0;
-    padding: 0;
-}
-
-        .nav-links {
-            display: flex;
-            gap: 40px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #1a1a1a;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #ff6b4a;
-        }
-
-        .cta-button {
-            background: #ff6b4a;
-            color: white;
-            padding: 12px 28px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
-            border: none;
-            cursor: pointer;
-        }
-
-        .cta-button:hover {
-            background: #ff5533;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(255, 107, 74, 0.3);
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 120px 0 60px;
-            text-align: center;
-        }
-
-        /* Visual Hero */
-        .visual-hero {
-            padding: 40px 0 80px;
-        }
-
-.hero-image {
-            width: 100%;
-            height: auto; // Changed from 500px to auto to preserve aspect ratio
-            object-fit: contain; // Changed from cover to contain to show full image
-            border-radius: 16px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-        }
-
-
-            .hero-image {
-                height: auto; // Changed from 300px to auto for mobile
-            }
-
-        .hero h1 {
-            font-size: 72px;
-            font-weight: 700;
-            line-height: 1.1;
-            margin-bottom: 24px;
-            color: #1a1a1a;
-        }
-
-        .hero .highlight {
-            color: #ff6b4a;
-        }
-
-        .hero p {
-            font-size: 24px;
-            color: #666;
-            max-width: 800px;
-            margin: 0 auto 40px;
-            line-height: 1.5;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            margin-top: 40px;
-        }
-
-        .secondary-button {
-            background: transparent;
-            color: #1a1a1a;
-            padding: 12px 28px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            border: 2px solid #1a1a1a;
-            transition: all 0.3s;
-        }
-
-        .secondary-button:hover {
-            background: #1a1a1a;
-            color: white;
-        }
-
-        /* Stats Section */
-        .stats {
-            padding: 60px 0;
-            background: #f8f9fa;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            text-align: center;
-        }
-
-        .stat-item h3 {
-            font-size: 56px;
-            font-weight: 700;
-            color: #ff6b4a;
-            margin-bottom: 8px;
-        }
-
-        .stat-item p {
-            font-size: 18px;
-            color: #666;
-        }
-
-        /* Features Section */
-        .features {
-            padding: 100px 0;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 80px;
-        }
-
-        .section-header h2 {
-            font-size: 48px;
-            font-weight: 700;
-            margin-bottom: 16px;
-        }
-
-        .section-header p {
-            font-size: 20px;
-            color: #666;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 60px;
-        }
-
-        .feature-card {
-            padding: 40px;
-            background: #ffffff;
-            border-radius: 16px;
-            border: 1px solid #e5e5e5;
-            transition: all 0.3s;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .feature-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 200px;
-            background-size: cover;
-            background-position: center;
-            opacity: 0.08;
-            z-index: 0;
-        }
-
-        .feature-card:nth-child(1)::before {
-            background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop&q=80');
-        }
-
-        .feature-card:nth-child(2)::before {
-            background-image: url('https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=600&fit=crop&q=80');
-        }
-
-        .feature-card:nth-child(3)::before {
-            background-image: url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=600&fit=crop&q=80');
-        }
-
-        .feature-card:nth-child(4)::before {
-            background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop&q=80');
-        }
-
-        .feature-card:nth-child(5)::before {
-            background-image: url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=600&fit=crop&q=80');
-        }
-
-        .feature-card:nth-child(6)::before {
-            background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop&q=80');
-        }
-
-        .feature-card > * {
-            position: relative;
-            z-index: 1;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
-            border-color: #ff6b4a;
-        }
-
-        .feature-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #ff6b4a 0%, #ff8a70 100%);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 28px;
-            margin-bottom: 24px;
-        }
-
-        .feature-card h3 {
-            font-size: 24px;
-            margin-bottom: 16px;
-            color: #1a1a1a;
-        }
-
-        .feature-card p {
-            color: #666;
-            line-height: 1.7;
-            font-size: 16px;
-        }
-
-        /* Advantage Section */
-        .advantage {
-            padding: 100px 0;
-            background: linear-gradient(135deg, #1a3a52 0%, #2d5f7f 100%);
-            color: white;
-        }
-
-        .advantage .section-header h2,
-        .advantage .section-header p {
-            color: white;
-        }
-
-        .advantage-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-top: 60px;
-        }
-
-        .advantage-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 32px;
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .advantage-card h3 {
-            font-size: 20px;
-            margin-bottom: 12px;
-            color: #ff6b4a;
-        }
-
-        .advantage-card p {
-            color: rgba(255, 255, 255, 0.9);
-            line-height: 1.7;
-        }
-
-        /* Process Section */
-        .process {
-            padding: 100px 0;
-            background: #f8f9fa;
-        }
-
-        .process-steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-top: 60px;
-        }
-
-        .process-step {
-            text-align: center;
-            position: relative;
-        }
-
-        .step-number {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, #ff6b4a 0%, #ff8a70 100%);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 32px;
-            font-weight: 700;
-            color: white;
-            margin: 0 auto 24px;
-        }
-
-        .process-step h3 {
-            font-size: 22px;
-            margin-bottom: 12px;
-        }
-
-        .process-step p {
-            color: #666;
-            line-height: 1.6;
-        }
-
-        /* Trust Section */
-        .trust-section {
-            padding: 100px 0;
-            background: white;
-        }
-
-        .trust-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
-        }
-
-        .trust-image img {
-            width: 100%;
-            height: 500px;
-            object-fit: cover;
-            border-radius: 16px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-        }
-
-        .trust-content h2 {
-            font-size: 40px;
-            margin-bottom: 24px;
-            line-height: 1.2;
-        }
-
-        .trust-content p {
-            font-size: 18px;
-            color: #666;
-            line-height: 1.7;
-            margin-bottom: 24px;
-        }
-
-        .trust-content ul {
-            list-style: none;
-            margin-bottom: 32px;
-        }
-
-        .trust-content ul li {
-            font-size: 17px;
-            color: #333;
-            padding: 12px 0;
-            line-height: 1.6;
-        }
-
-        /* Why Section */
-        .why-section {
-            padding: 100px 0;
-            background: white;
-        }
-
-        .why-grid {
-            display: grid;
-            grid-template-columns: 1.5fr 1fr;
-            gap: 80px;
-            align-items: start;
-        }
-
-        .why-content h2 {
-            font-size: 40px;
-            margin-bottom: 32px;
-            line-height: 1.2;
-        }
-
-        .why-content p {
-            font-size: 18px;
-            color: #444;
-            line-height: 1.8;
-            margin-bottom: 24px;
-        }
-
-        .why-highlight {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            padding: 40px;
-            border-radius: 12px;
-            margin-top: 40px;
-            border-left: 4px solid #ff6b4a;
-        }
-
-        .why-highlight h3 {
-            font-size: 24px;
-            margin-bottom: 16px;
-            color: #1a1a1a;
-        }
-
-        .why-highlight p {
-            font-size: 17px;
-            line-height: 1.7;
-            margin-bottom: 0;
-        }
-
-        .why-image img {
-            width: 100%;
-            height: 700px;
-            object-fit: cover;
-            border-radius: 16px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 100px;
-        }
-
-        /* Story Section */
-        .story-section {
-            padding: 100px 0;
-            background: #f8f9fa;
-        }
-
-        .story-content {
-            margin-top: 60px;
-            display: grid;
-            gap: 60px;
-        }
-
-        .story-block h3 {
-            font-size: 28px;
-            margin-bottom: 20px;
-            color: #1a1a1a;
-        }
-
-        .story-block p {
-            font-size: 18px;
-            color: #444;
-            line-height: 1.8;
-            margin-bottom: 20px;
-        }
-
-        .story-image-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            margin-top: 60px;
-        }
-
-        .story-image-grid img {
-            width: 100%;
-            height: 350px;
-            object-fit: cover;
-            border-radius: 12px;
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Advantage Section Updates */
-        .advantage-intro {
-            max-width: 900px;
-            margin: 40px auto 60px;
-            text-align: center;
-        }
-
-        .advantage-intro p {
-            font-size: 18px;
-            color: rgba(255, 255, 255, 0.95);
-            line-height: 1.8;
-            margin-bottom: 20px;
-        }
-
-        .advantage-card p {
-            margin-bottom: 20px;
-        }
-
-        .advantage-card p strong {
-            color: #ff8a70;
-            display: block;
-            margin-bottom: 8px;
-            font-size: 17px;
-        }
-
-        .advantage-synthesis {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 50px;
-            border-radius: 16px;
-            margin-top: 60px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .advantage-synthesis h3 {
-            font-size: 28px;
-            margin-bottom: 24px;
-            color: #ff6b4a;
-        }
-
-        .advantage-synthesis p {
-            font-size: 17px;
-            color: rgba(255, 255, 255, 0.95);
-            line-height: 1.8;
-            margin-bottom: 20px;
-        }
-
-        /* Process Section Updates */
-        .process-intro {
-            max-width: 800px;
-            margin: 0 auto 60px;
-            text-align: center;
-        }
-
-        .process-intro p {
-            font-size: 18px;
-            color: #666;
-            line-height: 1.7;
-        }
-
-        .process-step p {
-            margin-bottom: 16px;
-        }
-
-        .process-detail {
-            max-width: 900px;
-            margin: 80px auto 0;
-            padding: 50px;
-            background: white;
-            border-radius: 16px;
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
-        }
-
-        .process-detail h3 {
-            font-size: 28px;
-            margin-bottom: 24px;
-            color: #1a1a1a;
-        }
-
-        .process-detail p {
-            font-size: 17px;
-            color: #444;
-            line-height: 1.8;
-            margin-bottom: 20px;
-        }
-
-        /* Technology Section */
-        .technology-section {
-            padding: 100px 0;
-            background: white;
-        }
-
-        .tech-content {
-            margin-top: 60px;
-        }
-
-        .tech-block {
-            margin-bottom: 80px;
-        }
-
-        .tech-block img {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-            border-radius: 16px;
-            margin-bottom: 40px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-        }
-
-        .tech-text h3 {
-            font-size: 32px;
-            margin-bottom: 24px;
-            color: #1a1a1a;
-        }
-
-        .tech-text p {
-            font-size: 18px;
-            color: #444;
-            line-height: 1.8;
-            margin-bottom: 24px;
-        }
-
-        .tech-highlight {
-            background: linear-gradient(135deg, #1a3a52 0%, #2d5f7f 100%);
-            padding: 50px;
-            border-radius: 16px;
-            color: white;
-            margin-top: 60px;
-        }
-
-        .tech-highlight h3 {
-            font-size: 28px;
-            margin-bottom: 20px;
-            color: #ff6b4a;
-        }
-
-        .tech-highlight p {
-            font-size: 17px;
-            line-height: 1.8;
-            color: rgba(255, 255, 255, 0.95);
-        }
-
-        /* Expertise Section */
-        .expertise-section {
-            padding: 100px 0;
-            background: white;
-        }
-
-        .expertise-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
-            margin-top: 60px;
-        }
-
-        .expertise-card {
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s;
-        }
-
-        .expertise-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-        }
-
-        .expertise-card img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-        }
-
-        .expertise-card h3 {
-            font-size: 22px;
-            padding: 24px 24px 12px;
-            color: #1a1a1a;
-        }
-
-        .expertise-card p {
-            padding: 0 24px 24px;
-            color: #666;
-            line-height: 1.6;
-        }
-
-        /* Background Section */
-        .background-section {
-            padding: 100px 0;
-            background: #f8f9fa;
-        }
-
-        .background-content {
-            margin-top: 60px;
-        }
-
-        .background-content img {
-            width: 100%;
-            height: 450px;
-            object-fit: cover;
-            border-radius: 16px;
-            margin-bottom: 40px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-        }
-
-        .background-text h3 {
-            font-size: 28px;
-            margin-bottom: 20px;
-            color: #1a1a1a;
-        }
-
-        .background-text p {
-            font-size: 18px;
-            color: #444;
-            line-height: 1.8;
-        }
-
-        /* Product Section */
-        .product-section {
-            padding: 100px 0;
-            background: white;
-        }
-
-        .product-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
-        }
-
-        .product-content h2 {
-            font-size: 40px;
-            margin-bottom: 24px;
-            line-height: 1.2;
-        }
-
-        .product-content p {
-            font-size: 18px;
-            color: #444;
-            line-height: 1.8;
-            margin-bottom: 20px;
-        }
-
-        .product-image img {
-            width: 100%;
-            height: 500px;
-            object-fit: cover;
-            border-radius: 16px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Innovation Section */
-        .innovation-section {
-            padding: 100px 0;
-            background: #f8f9fa;
-        }
-
-        .innovation-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
-        }
-
-        .innovation-content h2 {
-            font-size: 40px;
-            margin-bottom: 24px;
-            line-height: 1.2;
-        }
-
-        .innovation-content p {
-            font-size: 18px;
-            color: #444;
-            line-height: 1.8;
-            margin-bottom: 20px;
-        }
-
-        .innovation-image img {
-            width: 100%;
-            height: 500px;
-            object-fit: cover;
-            border-radius: 16px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Success Section */
-        .success-section {
-            padding: 80px 0;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-        }
-
-        .success-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-top: 60px;
-        }
-
-        .success-card {
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-        }
-
-        .success-card h3 {
-            font-size: 22px;
-            margin-bottom: 16px;
-            color: #1a1a1a;
-        }
-
-        .success-card p {
-            color: #666;
-            line-height: 1.7;
-        }
-
-        /* Industries Section */
-        .industries-section {
-            padding: 100px 0;
-            background: white;
-        }
-
-        .industries-content {
-            margin-top: 60px;
-        }
-
-        .industries-content img {
-            width: 100%;
-            height: 350px;
-            object-fit: cover;
-            border-radius: 16px;
-            margin-bottom: 50px;
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-        }
-
-        .industries-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            margin-bottom: 50px;
-        }
-
-        .industry-item {
-            padding: 40px 30px;
-            background: #f8f9fa;
-            border-radius: 12px;
-            transition: all 0.3s;
-            text-align: center;
-        }
-
-        .industry-item:hover {
-            background: #fff;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-            transform: translateY(-4px);
-        }
-
-        .industry-icon {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-
-        .industry-item h3 {
-            font-size: 22px;
-            margin-bottom: 16px;
-            color: #ff6b4a;
-        }
-
-        .industry-item p {
-            color: #666;
-            line-height: 1.7;
-            font-size: 15px;
-        }
-
-        .industries-note {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            padding: 40px;
-            border-radius: 12px;
-            border-left: 4px solid #ff6b4a;
-        }
-
-        .industries-note p {
-            font-size: 17px;
-            color: #444;
-            line-height: 1.8;
-            margin: 0;
-        }
-
-        .industries-note strong {
-            color: #1a1a1a;
-        }
-
-        /* Roles Section */
-        .roles-section {
-            padding: 100px 0;
-            background: #f8f9fa;
-        }
-
-        .roles-intro {
-            text-align: center;
-            max-width: 800px;
-            margin: 40px auto 60px;
-        }
-
-        .roles-intro h3 {
-            font-size: 28px;
-            margin-bottom: 16px;
-            color: #1a1a1a;
-        }
-
-        .roles-intro p {
-            font-size: 18px;
-            color: #666;
-            line-height: 1.6;
-        }
-
-        .roles-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
-            margin-top: 60px;
-            margin-bottom: 50px;
-        }
-
-        .role-category {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        }
-
-        .role-category img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-        }
-
-        .role-category h3 {
-            font-size: 24px;
-            padding: 24px 30px 16px;
-            color: #1a1a1a;
-            border-bottom: 2px solid #ff6b4a;
-        }
-
-        .role-content {
-            padding: 24px 30px 30px;
-        }
-
-        .role-content p {
-            font-size: 16px;
-            font-weight: 600;
-            color: #ff6b4a;
-            margin: 20px 0 12px;
-        }
-
-        .role-content p:first-child {
-            margin-top: 0;
-        }
-
-        .role-category ul {
-            list-style: none;
-            padding: 0;
-            margin-bottom: 0;
-        }
-
-        .role-category ul li {
-            padding: 8px 0 8px 20px;
-            color: #666;
-            border-bottom: 1px solid #f0f0f0;
-            position: relative;
-            font-size: 15px;
-        }
-
-        .role-category ul li:before {
-            content: "→";
-            position: absolute;
-            left: 0;
-            color: #ff6b4a;
-        }
-
-        .role-category ul li:last-child {
-            border-bottom: none;
-        }
-
-        .roles-note {
-            background: linear-gradient(135deg, #1a3a52 0%, #2d5f7f 100%);
-            padding: 40px 50px;
-            border-radius: 12px;
-            color: white;
-        }
-
-        .roles-note p {
-            font-size: 17px;
-            line-height: 1.8;
-            margin: 0;
-            color: rgba(255, 255, 255, 0.95);
-        }
-
-        .roles-note strong {
-            color: #ff8a70;
-        }
-
-        /* Values Section */
-        .values-section {
-            padding: 100px 0;
-            background: white;
-        }
-
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-top: 60px;
-        }
-
-        .value-card {
-            text-align: center;
-            padding: 40px 30px;
-            background: #f8f9fa;
-            border-radius: 12px;
-            transition: all 0.3s;
-        }
-
-        .value-card:hover {
-            background: #fff;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-            transform: translateY(-4px);
-        }
-
-        .value-icon {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-
-        .value-card h3 {
-            font-size: 20px;
-            margin-bottom: 12px;
-            color: #1a1a1a;
-        }
-
-        .value-card p {
-            color: #666;
-            line-height: 1.6;
-            font-size: 15px;
-        }
-
-        /* About Section */
-        .about-section {
-            padding: 100px 0;
-            background: white;
-        }
-
-        .about-content {
-            margin-top: 60px;
-        }
-
-        .about-main {
-            margin-bottom: 60px;
-        }
-
-        .about-main img {
-            width: 100%;
-            height: 450px;
-            object-fit: cover;
-            border-radius: 16px;
-            margin-bottom: 40px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-        }
-
-        .about-text h3 {
-            font-size: 32px;
-            margin-bottom: 24px;
-            color: #1a1a1a;
-        }
-
-        .about-text p {
-            font-size: 18px;
-            color: #444;
-            line-height: 1.8;
-            margin-bottom: 20px;
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-        }
-
-        .about-card {
-            background: #f8f9fa;
-            padding: 40px;
-            border-radius: 12px;
-            text-align: center;
-        }
-
-        .about-card h3 {
-            font-size: 22px;
-            margin-bottom: 16px;
-            color: #ff6b4a;
-        }
-
-        .about-card p {
-            color: #666;
-            line-height: 1.7;
-            font-size: 16px;
-        }
-
-        /* How We Work Section */
-        .how-section {
-            padding: 100px 0;
-            background: #f8f9fa;
-        }
-
-        .how-content {
-            max-width: 1000px;
-            margin: 60px auto 0;
-        }
-
-        .how-step {
-            display: grid;
-            grid-template-columns: 100px 1fr;
-            gap: 40px;
-            margin-bottom: 60px;
-            align-items: start;
-        }
-
-        .how-number {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, #ff6b4a 0%, #ff8a70 100%);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 28px;
-            font-weight: 700;
-            color: white;
-        }
-
-        .how-text h3 {
-            font-size: 28px;
-            margin-bottom: 20px;
-            color: #1a1a1a;
-        }
-
-        .how-text p {
-            font-size: 17px;
-            color: #444;
-            line-height: 1.8;
-            margin-bottom: 16px;
-        }
-
-        /* Success Stories Section */
-        .stories-section {
-            padding: 100px 0;
-            background: white;
-        }
-
-        .stories-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
-            margin-top: 60px;
-        }
-
-        .story-card {
-            background: #f8f9fa;
-            padding: 40px;
-            border-radius: 12px;
-            transition: all 0.3s;
-        }
-
-        .story-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-        }
-
-        .story-category {
-            display: inline-block;
-            background: #ff6b4a;
-            color: white;
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
-
-        .story-card h3 {
-            font-size: 24px;
-            margin-bottom: 20px;
-            color: #1a1a1a;
-        }
-
-        .story-card p {
-            font-size: 16px;
-            color: #666;
-            line-height: 1.7;
-            margin-bottom: 16px;
-        }
-
-        .story-card p strong {
-            color: #1a1a1a;
-            display: block;
-            margin-top: 16px;
-        }
-
-        .story-stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin-top: 30px;
-            padding-top: 30px;
-            border-top: 2px solid #e0e0e0;
-        }
-
-        .stat-item-small {
-            text-align: center;
-        }
-
-        .stat-number {
-            display: block;
-            font-size: 32px;
-            font-weight: 700;
-            color: #ff6b4a;
-            margin-bottom: 8px;
-        }
-
-        .stat-label {
-            display: block;
-            font-size: 13px;
-            color: #666;
-            line-height: 1.4;
-        }
-
-        /* Join Network Section */
-        .network-section {
-            padding: 100px 0;
-            background: linear-gradient(135deg, #1a3a52 0%, #2d5f7f 100%);
-            color: white;
-        }
-
-        .network-content {
-            display: grid;
-            grid-template-columns: 1.5fr 1fr;
-            gap: 80px;
-            align-items: center;
-        }
-
-        .network-text h2 {
-            font-size: 40px;
-            margin-bottom: 24px;
-            color: white;
-        }
-
-        .network-text > p {
-            font-size: 18px;
-            margin-bottom: 40px;
-            color: rgba(255, 255, 255, 0.95);
-            line-height: 1.7;
-        }
-
-        .network-benefits {
-            margin-bottom: 40px;
-        }
-
-        .benefit-item {
-            display: flex;
-            gap: 20px;
-            margin-bottom: 24px;
-            align-items: start;
-        }
-
-        .benefit-icon {
-            width: 32px;
-            height: 32px;
-            background: #ff6b4a;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            font-weight: 700;
-            font-size: 18px;
-        }
-
-        .benefit-item strong {
-            display: block;
-            font-size: 18px;
-            margin-bottom: 8px;
-            color: white;
-        }
-
-        .benefit-item p {
-            font-size: 15px;
-            color: rgba(255, 255, 255, 0.85);
-            line-height: 1.6;
-            margin: 0;
-        }
-
-        .network-image img {
-            width: 100%;
-            height: 600px;
-            object-fit: cover;
-            border-radius: 16px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Why Choose Us Section */
-        .why-choose-section {
-            padding: 100px 0;
-            background: white;
-        }
-
-        .why-choose-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
-            margin-top: 60px;
-        }
-
-        .why-choose-card {
-            background: #f8f9fa;
-            padding: 40px;
-            border-radius: 12px;
-            text-align: center;
-            transition: all 0.3s;
-        }
-
-        .why-choose-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-        }
-
-        .why-choose-icon {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-
-        .why-choose-card h3 {
-            font-size: 22px;
-            margin-bottom: 16px;
-            color: #1a1a1a;
-        }
-
-        .why-choose-card p {
-            color: #666;
-            line-height: 1.7;
-            font-size: 16px;
-        }
-
-        /* Services Overview */
-        .services-overview {
-            padding: 80px 0 40px;
-            background: linear-gradient(135deg, #1a3a52 0%, #2d5f7f 100%);
-        }
-
-        .services-nav {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            margin-top: 50px;
-        }
-
-        .service-nav-link {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            color: white;
-            text-decoration: none;
-            padding: 20px;
-            border-radius: 12px;
-            text-align: center;
-            font-weight: 600;
-            font-size: 18px;
-            border: 2px solid transparent;
-            transition: all 0.3s;
-        }
-
-        .service-nav-link:hover {
-            background: rgba(255, 255, 255, 0.2);
-            border-color: #ff6b4a;
-            transform: translateY(-2px);
-        }
-
-        /* Service Detail Sections */
-        .service-detail {
-            padding: 100px 0;
-            background: white;
-        }
-
-        .service-detail.service-alt {
-            background: #f8f9fa;
-        }
-
-        .service-content {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .service-header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .service-badge {
-            display: inline-block;
-            background: #ff6b4a;
-            color: white;
-            padding: 6px 20px;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: 600;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .service-header h2 {
-            font-size: 48px;
-            margin-bottom: 16px;
-            color: #1a1a1a;
-        }
-
-        .service-subtitle {
-            font-size: 20px;
-            color: #666;
-            margin: 0;
-        }
-
-        .service-main {
-            margin-bottom: 60px;
-        }
-
-        .service-main img {
-            width: 100%;
-            height: 450px;
-            object-fit: cover;
-            border-radius: 16px;
-            margin-bottom: 40px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-        }
-
-        .service-description h3 {
-            font-size: 32px;
-            margin-bottom: 24px;
-            color: #1a1a1a;
-        }
-
-        .service-description p {
-            font-size: 18px;
-            color: #444;
-            line-height: 1.8;
-            margin-bottom: 20px;
-        }
-
-        .service-features {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            background: #f8f9fa;
-            padding: 50px;
-            border-radius: 16px;
-            margin-bottom: 50px;
-        }
-
-        .service-alt .service-features {
-            background: white;
-        }
-
-        .feature-col h4 {
-            font-size: 24px;
-            margin-bottom: 24px;
-            color: #ff6b4a;
-        }
-
-        .feature-col ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .feature-col ul li {
-            padding: 12px 0 12px 30px;
-            color: #444;
-            line-height: 1.6;
-            position: relative;
-            border-bottom: 1px solid #e0e0e0;
-        }
-
-        .feature-col ul li:before {
-            content: "→";
-            position: absolute;
-            left: 0;
-            color: #ff6b4a;
-            font-weight: 700;
-        }
-
-        .feature-col ul li:last-child {
-            border-bottom: none;
-        }
-
-        .service-cta {
-            text-align: center;
-        }
-
-        /* CTA Section */
-        .cta-section {
-            padding: 100px 0;
-            text-align: center;
-            background: linear-gradient(135deg, #ff6b4a 0%, #ff8a70 100%);
-            color: white;
-        }
-
-        .cta-section h2 {
-            font-size: 48px;
-            margin-bottom: 24px;
-        }
-
-        .cta-section p {
-            font-size: 20px;
-            margin-bottom: 40px;
-            opacity: 0.95;
-        }
-
-        .cta-section .cta-button {
-            background: white;
-            color: #ff6b4a;
-            font-size: 18px;
-            padding: 16px 40px;
-        }
-
-        .cta-section .cta-button:hover {
-            background: #f0f0f0;
-            transform: translateY(-2px);
-        }
-
-        /* Visual CTA */
-        .visual-cta {
-            padding: 0 0 60px;
-            background: linear-gradient(135deg, #ff6b4a 0%, #ff8a70 100%);
-        }
-
-        .visual-cta-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .cta-image {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            border-radius: 12px;
-            transition: transform 0.3s;
-        }
-
-        .cta-image:hover {
-            transform: scale(1.05);
-        }
-
-        /* Footer */
-        footer {
-            padding: 60px 0 30px;
-            background: #1a1a1a;
-            color: white;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 60px;
-            margin-bottom: 40px;
-        }
-
-       .footer-brand {
-    padding: 0;
-    margin: 0;
-}
-
-.footer-brand img {
-    margin-bottom: 15px;
-    display: block;
-}
-
-        .footer-logo {
-    height: 80px;
-    margin-bottom: 15px;
-    display: block;
-    margin-top: 0;
-    padding: 0;
-}
-
-        .footer-brand p {
-            color: rgba(255, 255, 255, 0.7);
-            line-height: 1.6;
-        }
-
-        .footer-section h4 {
-            margin-bottom: 20px;
-            font-size: 16px;
-            font-weight: 600;
-        }
-
-        .footer-section ul {
-            list-style: none;
-        }
-
-        .footer-section ul li {
-            margin-bottom: 12px;
-        }
-
-        .footer-section ul li a {
-            color: rgba(255, 255, 255, 0.7);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .footer-section ul li a:hover {
-            color: #ff6b4a;
-        }
-
-        .footer-bottom {
-            padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            text-align: center;
-            color: rgba(255, 255, 255, 0.5);
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 42px;
-            }
-
-            .hero p {
-                font-size: 18px;
-            }
-
-            .section-header h2 {
-                font-size: 36px;
-            }
-
-            .features-grid,
-            .advantage-grid,
-            .expertise-grid,
-            .industries-grid,
-            .roles-grid,
-            .values-grid,
-            .success-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-content {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .nav-links {
-                display: none;
-            }
-
-            .hero-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .hero-image {
-                height: 300px;
-            }
-
-            .trust-grid,
-            .why-grid,
-            .product-grid,
-            .innovation-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .trust-image img,
-            .why-image img,
-            .product-image img,
-            .innovation-image img {
-                height: 350px;
-                position: relative;
-                top: 0;
-            }
-
-            .visual-cta-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .trust-content h2,
-            .why-content h2,
-            .product-content h2,
-            .innovation-content h2 {
-                font-size: 32px;
-            }
-
-            .process-detail,
-            .advantage-synthesis {
-                padding: 30px;
-            }
-
-            .tech-block img,
-            .background-content img,
-            .industries-content img {
-                height: 250px;
-            }
-
-            .why-highlight {
-                padding: 30px;
-            }
-
-            .background-text h3,
-            .tech-text h3 {
-                font-size: 24px;
-            }
-
-            .roles-note {
-                padding: 30px;
-            }
-
-            .industries-note {
-                padding: 30px;
-            }
-
-            .role-content {
-                padding: 20px 24px 24px;
-            }
-
-            .about-grid,
-            .story-stats {
-                grid-template-columns: 1fr;
-            }
-
-            .how-step {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-
-            .how-number {
-                width: 60px;
-                height: 60px;
-                font-size: 24px;
-            }
-
-            .network-content {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .network-image img {
-                height: 400px;
-            }
-
-            .stories-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .services-nav {
-                grid-template-columns: 1fr;
-            }
-
-            .service-features {
-                grid-template-columns: 1fr;
-                padding: 30px;
-            }
-
-            .service-header h2 {
-                font-size: 36px;
-            }
-
-            .service-main img {
-                height: 300px;
-            }
-
-            .why-choose-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -1814,12 +35,12 @@
         </div>
     </section>
 
-    <!-- Visual Section -->
-<section class="visual-hero">
-    <div class="container">
-        <img src="images/hero-main.png" alt="Indian tech professionals collaborating in modern workspace" class="hero-image">
-    </div>
-</section>
+    <!-- Visual Hero -->
+    <section class="visual-hero">
+        <div class="container">
+            <img src="images/hero-main.png" alt="Indian tech professionals collaborating in modern workspace" class="hero-image">
+        </div>
+    </section>
 
     <!-- Stats Section -->
     <section class="stats">
@@ -1852,17 +73,15 @@
                 <div class="why-content">
                     <h2>Why DecaHire Succeeds</h2>
                     <p>We combine deep technical knowledge with recruitment excellence. Our team has built production AI systems, shipped enterprise products, and scaled engineering teams. This hands-on experience means we understand exactly what you need.</p>
-
                     <p>Our success comes from genuine technical conversations. When we discuss requirements, we're not matching keywords—we're understanding architectures, evaluating depth, and assessing real capabilities. This creates perfect matches every time.</p>
-
                     <div class="why-highlight">
                         <h3>The Result: Better Hires, Faster</h3>
                         <p>Technology enables 10X speed while maintaining quality. Our AI systems handle scale, technical expertise ensures accuracy, and recruitment experience delivers exceptional candidate experiences. Speed, quality, satisfaction—all three, always.</p>
                     </div>
                 </div>
-<div class="why-image">
-    <img src="images/tech-professionals.png" alt="Indian tech professionals in modern office">
-</div>
+                <div class="why-image">
+                    <img src="images/tech-professionals.png" alt="Indian tech professionals in modern office">
+                </div>
             </div>
         </div>
     </section>
@@ -1874,20 +93,19 @@
                 <h2>Our Unique Expertise</h2>
                 <p>What makes DecaHire different from other recruitment agencies</p>
             </div>
-
             <div class="expertise-grid">
                 <div class="expertise-card">
-                    <img src="images/startup-collaboration.png" alt="Tech product team collaboration - building world-class products">
+                    <img src="images/startup-collaboration.png" alt="Tech product team collaboration">
                     <h3>Tech Product Background</h3>
                     <p>We've built world-class products using cutting-edge technology. This experience helps us identify doers, not just those who sound good on paper.</p>
                 </div>
                 <div class="expertise-card">
-                    <img src="images/business-meeting.png" alt="Corporate hiring professionals in strategic meeting">
+                    <img src="images/business-meeting.png" alt="Corporate hiring professionals">
                     <h3>Corporate Hiring Experience</h3>
                     <p>Years in corporate hiring technology give us insights into what actually works at scale. We apply proven methodologies refined through thousands of placements.</p>
                 </div>
                 <div class="expertise-card">
-                    <img src="images/tech-workspace.png" alt="AI implementation team in modern tech workspace">
+                    <img src="images/tech-workspace.png" alt="AI implementation team">
                     <h3>AI Implementation Excellence</h3>
                     <p>We don't just talk about AI—we've deployed it in production. Our systems are built by people who understand both the technology and the hiring process.</p>
                 </div>
@@ -1895,17 +113,15 @@
         </div>
     </section>
 
-    <!-- Team Background Section -->
+    <!-- Background Section -->
     <section class="background-section">
         <div class="container">
             <div class="section-header">
                 <h2>Built From Real-World Experience</h2>
                 <p>Our team brings together the best of technology, product development, and recruitment expertise</p>
             </div>
-
             <div class="background-content">
-                <img src="images/team-working.png" alt="Corporate hiring technology team in conference room discussion">
-
+                <img src="images/team-working.png" alt="Corporate hiring technology team">
                 <div class="background-text">
                     <h3>Corporate Hiring Technology Veterans</h3>
                     <p>Our founding team spent years in corporate hiring technology, building systems for Fortune 500 companies. We understand recruitment from the inside—the challenges, the bottlenecks, and most importantly, what actually works at scale.</p>
@@ -1921,11 +137,10 @@
                 <div class="product-content">
                     <h2>World-Class Product Delivery</h2>
                     <p>We've delivered enterprise products across industries—AI analytics platforms, SaaS solutions, and complex systems at scale. This product development experience gives us unique insights into what makes great technical talent.</p>
-
                     <p>When you need a senior ML engineer, we understand the problems they'll solve, the tradeoffs they'll navigate, and the skills that separate good from exceptional.</p>
                 </div>
                 <div class="product-image">
-                    <img src="images/professionals-meeting.png" alt="Product development team celebrating successful delivery">
+                    <img src="images/professionals-meeting.png" alt="Product development team">
                 </div>
             </div>
         </div>
@@ -1936,12 +151,11 @@
         <div class="container">
             <div class="innovation-grid">
                 <div class="innovation-image">
-                    <img src="images/startup-workspace.png" alt="AI team collaborating on technical implementation with sticky notes">
+                    <img src="images/startup-workspace.png" alt="AI team collaborating">
                 </div>
                 <div class="innovation-content">
                     <h2>AI-Powered Excellence</h2>
                     <p>We leverage AI fundamentally differently than other agencies. Our systems understand technical depth, assess project complexity, and identify patterns indicating genuine expertise.</p>
-
                     <p>AI scales our human expertise—every decision is informed by technical knowledge and validated by experienced judgment. This hybrid approach delivers both speed and accuracy.</p>
                 </div>
             </div>
@@ -1997,38 +211,29 @@
                 <h2>The DecaHire 360° Advantage</h2>
                 <p>Three dimensions working together to transform your hiring outcomes</p>
             </div>
-
             <div class="advantage-intro">
                 <p>DecaHire brings together recruitment excellence, candidate management expertise, and deep technical understanding. These three dimensions reinforce each other, creating results greater than the sum of their parts.</p>
             </div>
-
             <div class="advantage-grid">
                 <div class="advantage-card">
                     <h3>01. Recruitment Excellence</h3>
                     <p><strong>Market Intelligence:</strong> Active relationships with thousands of technical professionals across specializations inform our sourcing strategy and market insights.</p>
-
                     <p><strong>Sourcing Mastery:</strong> We know where great candidates spend time, what motivates them, and how to craft messages that resonate authentically and effectively.</p>
-
                     <p><strong>Process Optimization:</strong> Every step refined through hundreds of successful placements, maximizing efficiency, ensuring exceptional quality and candidate experience.</p>
                 </div>
                 <div class="advantage-card">
                     <h3>02. Candidate Management</h3>
                     <p><strong>Exceptional Experience:</strong> Every interaction reflects professionalism, respect, and genuine interest in each candidate's success and career growth trajectory.</p>
-
                     <p><strong>Expert Preparation:</strong> Thorough interview preparation and company insights lead to better, more productive conversations for everyone involved in the process.</p>
-
                     <p><strong>Smart Negotiation:</strong> We facilitate agreements where all parties feel valued, excited, and confident about the partnership ahead, ensuring long-term success.</p>
                 </div>
                 <div class="advantage-card">
                     <h3>03. Technical Understanding</h3>
                     <p><strong>Production Experience:</strong> Real systems at scale—we understand the technical decisions that great engineers make daily and the challenges they overcome.</p>
-
                     <p><strong>Architecture Fluency:</strong> We evaluate architectural thinking and system design capability, not just coding ability or knowledge of specific tools and frameworks.</p>
-
                     <p><strong>Quality Recognition:</strong> We identify excellence and spot red flags that resume keywords hide, ensuring truly qualified candidates every time we present.</p>
                 </div>
             </div>
-
             <div class="advantage-synthesis">
                 <h3>How These Dimensions Work Together</h3>
                 <p>Technical understanding makes sourcing more effective. Recruitment expertise makes technical assessments practical. Candidate management excellence is enhanced by technical credibility. This integration creates a flywheel effect—each dimension strengthening the others, transforming hiring from a challenge into a strategic advantage.</p>
@@ -2043,7 +248,9 @@
                 <h2>Our Streamlined Process</h2>
                 <p>Four steps that compress weeks into days without compromising quality</p>
             </div>
-
+            <div class="process-intro">
+                <p>We've refined our process through hundreds of successful placements. Each step is optimized for speed, quality, and exceptional candidate experiences.</p>
+            </div>
             <div class="process-steps">
                 <div class="process-step">
                     <div class="step-number">1</div>
@@ -2066,6 +273,10 @@
                     <p>Within days, you're interviewing pre-vetted candidates. We coordinate efficiently, prep thoroughly, and maintain close communication throughout. Our involvement continues through onboarding and beyond for lasting success.</p>
                 </div>
             </div>
+            <div class="process-detail">
+                <h3>Why Our Process Works</h3>
+                <p>Traditional recruitment is slow because it's sequential and manual. We've parallelized what can be parallelized and automated what should be automated, while keeping human judgment where it matters most. The result: 10X faster time-to-hire without sacrificing quality.</p>
+            </div>
         </div>
     </section>
 
@@ -2074,14 +285,12 @@
         <div class="container">
             <div class="trust-grid">
                 <div class="trust-image">
-                    <img src="images/trust-section.png" alt="Modern tech office workspace with collaborative team environment">
+                    <img src="images/trust-section.png" alt="Modern tech office workspace">
                 </div>
                 <div class="trust-content">
                     <h2>Built by Technologists, For Technologists</h2>
                     <p>Our team has been on both sides of the table—building products, hiring teams, and scaling organizations. This unique perspective gives us insights others simply cannot match.</p>
-
                     <p>We've architected production AI systems, built scalable microservices, managed engineering teams, made critical technical decisions, and shipped products on aggressive timelines. This isn't theoretical knowledge—it's battle-tested experience from years in software development and engineering leadership.</p>
-
                     <a href="#contact" class="cta-button">Partner With Us</a>
                 </div>
             </div>
@@ -2095,37 +304,36 @@
                 <h2>Powered by Advanced Technology</h2>
                 <p>We leverage cutting-edge tools to deliver exceptional results</p>
             </div>
-
             <div class="tech-content">
                 <div class="tech-block">
-                    <img src="images/modern-workspace.png" alt="AI development team collaborating on technical solutions">
-
+                    <img src="images/modern-workspace.png" alt="AI development team">
                     <div class="tech-text">
                         <h3>AI That Delivers Results</h3>
                         <p>We use AI fundamentally differently because we've built production AI systems ourselves. Our AI analyzes technical depth, project complexity, and success patterns—but human experts make all final decisions. This human-AI collaboration delivers both speed and accuracy.</p>
                     </div>
                 </div>
-
                 <div class="tech-block">
                     <div class="tech-text">
                         <h3>Integrated Technology Stack</h3>
                         <p>Our integrated platform eliminates friction at every step. Sourcing, communication, scheduling, assessment, and analytics flow seamlessly. We adapt to your workflow—whether it's your ATS, Slack, or preferred tools. Behind the scenes, we continuously optimize based on data and results.</p>
                     </div>
-
-                    <img src="images/tech-infrastructure.png" alt="Modern tech office with integrated platform infrastructure">
+                    <img src="images/tech-infrastructure.png" alt="Tech office infrastructure">
                 </div>
+            </div>
+            <div class="tech-highlight">
+                <h3>Security & Compliance</h3>
+                <p>Enterprise-grade security protects your information and candidate data. All data is encrypted, access is role-based, and we're fully compliant with privacy regulations including GDPR and data protection laws.</p>
             </div>
         </div>
     </section>
 
-    <!-- Client Success Section -->
+    <!-- Success Section -->
     <section class="success-section">
         <div class="container">
             <div class="section-header">
                 <h2>Built for Your Success</h2>
                 <p>Every aspect designed with your goals in mind</p>
             </div>
-
             <div class="success-grid">
                 <div class="success-card">
                     <h3>Security First</h3>
@@ -2148,47 +356,44 @@
         <div class="container">
             <div class="section-header">
                 <h2>Who We Serve</h2>
-                <p>Whether you are a global enterprise or a promising venture, we possess the contextual understanding required to address the distinct talent needs of every organization.</p>
+                <p>From global enterprises to promising ventures, we understand the unique talent needs of every organization</p>
             </div>
-
             <div class="industries-content">
-                <img src="images/business-professionals.png" alt="Business professionals planning organizational strategy">
-
+                <img src="images/business-professionals.png" alt="Business professionals">
                 <div class="industries-grid">
                     <div class="industry-item">
                         <div class="industry-icon">🏢</div>
                         <h3>IT Services Companies</h3>
-                        <p>Leading service providers building solutions for global clients across industries, delivering consulting, development, and managed services at scale</p>
+                        <p>Leading service providers building solutions for global clients across industries</p>
                     </div>
                     <div class="industry-item">
                         <div class="industry-icon">🚀</div>
                         <h3>Global Product Companies</h3>
-                        <p>Tech giants with innovation centers and product development teams in India, building software that serves millions globally</p>
+                        <p>Tech giants with innovation centers building software that serves millions globally</p>
                     </div>
                     <div class="industry-item">
                         <div class="industry-icon">🏛️</div>
                         <h3>Global Captives (GCCs)</h3>
-                        <p>Fortune 500 companies with dedicated technology centers in India, supporting global operations with engineering excellence</p>
+                        <p>Fortune 500 companies with dedicated technology centers supporting global operations</p>
                     </div>
                     <div class="industry-item">
                         <div class="industry-icon">🌱</div>
                         <h3>Startups</h3>
-                        <p>Growth startups building innovative products, requiring versatile builders who thrive in dynamic, fast-paced roles.</p>
+                        <p>Growth startups building innovative products, requiring versatile builders</p>
                     </div>
                     <div class="industry-item">
                         <div class="industry-icon">🦄</div>
                         <h3>Unicorns</h3>
-                        <p>High-growth companies scaling rapidly, needing experienced talent who can handle complexity while maintaining startup agility</p>
+                        <p>High-growth companies scaling rapidly, needing experienced talent</p>
                     </div>
                     <div class="industry-item">
                         <div class="industry-icon">🏭</div>
                         <h3>Tech for Non-Tech</h3>
-                        <p>Traditional industries undergoing digital transformation - BFSI, Manufacturing, Retail, Healthcare - building internal tech teams</p>
+                        <p>Traditional industries undergoing digital transformation</p>
                     </div>
                 </div>
-
                 <div class="industries-note">
-                    <p><strong>We understand the unique dynamics of each segment:</strong> Services companies need multi-client deliverers. Product requires deep product thinking. Captives seek professionals who work seamlessly across time zones with global teams. Startups need versatile builders. Unicorns require scale experts. Traditional companies need transformation leaders. We've successfully placed talent across all categories.</p>
+                    <p><strong>We understand the unique dynamics of each segment:</strong> Services companies need multi-client deliverers. Product requires deep product thinking. Captives seek professionals who work seamlessly across time zones. Startups need versatile builders. Unicorns require scale experts. Traditional companies need transformation leaders.</p>
                 </div>
             </div>
         </div>
@@ -2201,15 +406,13 @@
                 <h2>Roles We Fill</h2>
                 <p>From individual contributors to C-suite leadership - every level, every function</p>
             </div>
-
             <div class="roles-intro">
                 <h3>Engineering & Technology Leadership</h3>
                 <p>We recruit across the entire spectrum - from junior engineers to CTOs and VPs of Engineering</p>
             </div>
-
             <div class="roles-grid">
                 <div class="role-category">
-                    <img src="images/software-developers.png" alt="Software developer coding on laptop - individual contributor role">
+                    <img src="images/software-developers.png" alt="Software developer">
                     <h3>Individual Contributors</h3>
                     <div class="role-content">
                         <p><strong>Software Engineering:</strong></p>
@@ -2217,9 +420,8 @@
                             <li>Frontend Engineers (React, Angular, Vue)</li>
                             <li>Backend Engineers (Java, Python, Node.js, Go)</li>
                             <li>Full-Stack Engineers</li>
-                            <li>Mobile Developers (iOS, Android, React Native, Flutter)</li>
+                            <li>Mobile Developers (iOS, Android, React Native)</li>
                         </ul>
-
                         <p><strong>Infrastructure & DevOps:</strong></p>
                         <ul>
                             <li>DevOps Engineers</li>
@@ -2227,7 +429,6 @@
                             <li>Cloud Engineers (AWS, Azure, GCP)</li>
                             <li>Platform Engineers</li>
                         </ul>
-
                         <p><strong>Data & AI:</strong></p>
                         <ul>
                             <li>Data Engineers</li>
@@ -2237,9 +438,8 @@
                         </ul>
                     </div>
                 </div>
-
                 <div class="role-category">
-                    <img src="images/tech-leads.png" alt="Tech lead presenting to engineering team - mid-level leadership">
+                    <img src="images/tech-leads.png" alt="Tech lead">
                     <h3>Mid-Level Leadership</h3>
                     <div class="role-content">
                         <p><strong>Engineering Management:</strong></p>
@@ -2249,7 +449,6 @@
                             <li>Staff Engineers / Principal Engineers</li>
                             <li>Architects (Solution, Enterprise, Cloud)</li>
                         </ul>
-
                         <p><strong>Product & Design:</strong></p>
                         <ul>
                             <li>Product Managers</li>
@@ -2257,7 +456,6 @@
                             <li>UX/UI Designers</li>
                             <li>Design Leads</li>
                         </ul>
-
                         <p><strong>Specialized Roles:</strong></p>
                         <ul>
                             <li>Security Engineers</li>
@@ -2267,9 +465,8 @@
                         </ul>
                     </div>
                 </div>
-
                 <div class="role-category">
-                    <img src="images/tech-executives.png" alt="Technology executive leader - senior leadership role">
+                    <img src="images/tech-executives.png" alt="Technology executive">
                     <h3>Senior Leadership</h3>
                     <div class="role-content">
                         <p><strong>Executive Leadership:</strong></p>
@@ -2279,7 +476,6 @@
                             <li>Chief Architect</li>
                             <li>Chief Product Officer (CPO)</li>
                         </ul>
-
                         <p><strong>Senior Management:</strong></p>
                         <ul>
                             <li>Directors of Engineering</li>
@@ -2287,7 +483,6 @@
                             <li>Head of DevOps/Infrastructure</li>
                             <li>Head of Product</li>
                         </ul>
-
                         <p><strong>Strategic Roles:</strong></p>
                         <ul>
                             <li>Distinguished Engineers</li>
@@ -2298,9 +493,8 @@
                     </div>
                 </div>
             </div>
-
             <div class="roles-note">
-                <p><strong>Whether you're building your first engineering team or scaling to hundreds,</strong> we have experience recruiting at every level. From fresh graduates to seasoned CTOs with decades of experience, we understand what success looks like at each stage and can identify the right talent for your specific needs.</p>
+                <p><strong>Whether you're building your first engineering team or scaling to hundreds,</strong> we have experience recruiting at every level. From fresh graduates to seasoned CTOs with decades of experience, we understand what success looks like at each stage.</p>
             </div>
         </div>
     </section>
@@ -2312,62 +506,57 @@
                 <h2>Our Values</h2>
                 <p>Principles that guide everything we do</p>
             </div>
-
             <div class="values-grid">
                 <div class="value-card">
                     <div class="value-icon">🎯</div>
                     <h3>Quality Over Quantity</h3>
-                    <p>We'd rather present three exceptional candidates than ten mediocre ones. Every candidate we submit has been rigorously vetted to meet your standards.</p>
+                    <p>We'd rather present three exceptional candidates than ten mediocre ones. Every candidate we submit has been rigorously vetted.</p>
                 </div>
                 <div class="value-card">
                     <div class="value-icon">⚡</div>
                     <h3>Speed With Excellence</h3>
-                    <p>Fast doesn't mean careless. Our technology enables speed while our expertise ensures quality remains uncompromised at every stage of the process.</p>
+                    <p>Fast doesn't mean careless. Our technology enables speed while our expertise ensures quality remains uncompromised.</p>
                 </div>
                 <div class="value-card">
                     <div class="value-icon">🤝</div>
                     <h3>Partnership Mindset</h3>
-                    <p>Your success defines our success. We're invested in long-term outcomes and building relationships, not just making immediate placements for short-term gains.</p>
+                    <p>Your success defines our success. We're invested in long-term outcomes, not just making placements.</p>
                 </div>
                 <div class="value-card">
                     <div class="value-icon">💡</div>
                     <h3>Continuous Learning</h3>
-                    <p>Technology evolves rapidly and constantly. We stay current by building with new tools, testing approaches, and learning from every placement we make successfully.</p>
+                    <p>Technology evolves constantly. We stay current by building with new tools and learning from every placement.</p>
                 </div>
                 <div class="value-card">
                     <div class="value-icon">🔒</div>
                     <h3>Trust & Transparency</h3>
-                    <p>Honest communication, clear expectations, and transparent processes build lasting relationships. We believe in openness and authenticity in every interaction we have.</p>
+                    <p>Honest communication, clear expectations, and transparent processes build lasting relationships.</p>
                 </div>
                 <div class="value-card">
                     <div class="value-icon">🌟</div>
                     <h3>Candidate Care</h3>
-                    <p>Great candidate experiences lead to better hires. We treat every professional with respect and genuine care, building long-term relationships.</p>
+                    <p>Great candidate experiences lead to better hires. We treat every professional with respect and care.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About DecaHire Section -->
+    <!-- About Section -->
     <section class="about-section" id="about">
         <div class="container">
             <div class="section-header">
                 <h2>About DecaHire</h2>
                 <p>Redefining recruitment through technology and expertise</p>
             </div>
-
             <div class="about-content">
                 <div class="about-main">
-                    <img src="images/about-team.png" alt="DecaHire recruitment team celebrating successful placement">
-
+                    <img src="images/about-team.png" alt="DecaHire team">
                     <div class="about-text">
                         <h3>Who We Are</h3>
                         <p>DecaHire is a technology-first recruitment agency built by people who have lived both sides of the hiring equation. We've built production systems, shipped enterprise products, hired and scaled engineering teams, and experienced firsthand the frustrations of traditional recruitment.</p>
-
-                        <p>We founded DecaHire with a simple conviction: recruitment should be fast, precise, and grounded in genuine technical understanding. Not buzzword matching. Not checkbox screening. Real conversations between people who understand technology at a fundamental level.</p>
+                        <p>We founded DecaHire with a simple conviction: recruitment should be fast, precise, and grounded in genuine technical understanding. Not buzzword matching. Not checkbox screening. Real conversations between people who understand technology.</p>
                     </div>
                 </div>
-
                 <div class="about-grid">
                     <div class="about-card">
                         <h3>Our Mission</h3>
@@ -2375,117 +564,133 @@
                     </div>
                     <div class="about-card">
                         <h3>Our Vision</h3>
-                        <p>A world where every tech company has access to recruitment that understands their challenges as deeply as they do, and helps them grow, by finding great talent.</p>
+                        <p>A world where every tech company has access to recruitment that understands their challenges as deeply as they do.</p>
                     </div>
                     <div class="about-card">
                         <h3>Our Approach</h3>
-                        <p>We blend human expertise with AI efficiency. Technology handles scale; people ensure excellence. Every placement is built on genuine understanding.</p>
+                        <p>We blend human expertise with AI efficiency. Technology handles scale; people ensure excellence.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- How We Work Detail Section -->
+    <!-- How We Work Section -->
     <section class="how-section" id="how-we-work">
         <div class="container">
             <div class="section-header">
                 <h2>How We Work</h2>
                 <p>Our proven methodology from first contact to successful placement</p>
             </div>
-
             <div class="how-content">
                 <div class="how-step">
                     <div class="how-number">01</div>
                     <div class="how-text">
                         <h3>Understanding Your Needs</h3>
-                        <p>We start with in-depth discovery conversations to understand your technical requirements, team culture, growth plans, and specific challenges. This isn't a form-filling exercise—it's a genuine dialogue between technical peers.</p>
-                        <p>We discuss tech stacks, architectural patterns, team structures, and the real problems you're trying to solve. This depth of understanding ensures we're looking for the right people, not just the right keywords.</p>
+                        <p>We start with in-depth discovery conversations to understand your technical requirements, team culture, growth plans, and specific challenges.</p>
+                        <p>We discuss tech stacks, architectural patterns, team structures, and the real problems you're trying to solve.</p>
                     </div>
                 </div>
-
                 <div class="how-step">
                     <div class="how-number">02</div>
                     <div class="how-text">
                         <h3>Intelligent Sourcing</h3>
-                        <p>We deploy AI-powered systems that search across multiple channels simultaneously—job boards, professional networks, GitHub, technical communities, and our extensive network. Our AI evaluates candidates across dozens of dimensions beyond resume keywords.</p>
-                        <p>But technology is just the first filter. Every candidate is reviewed by our technical recruiters who add context, judgment, and human insight that AI cannot replicate.</p>
+                        <p>We deploy AI-powered systems that search across multiple channels simultaneously—job boards, professional networks, GitHub, technical communities.</p>
+                        <p>Every candidate is reviewed by our technical recruiters who add context and judgment.</p>
                     </div>
                 </div>
-
                 <div class="how-step">
                     <div class="how-number">03</div>
                     <div class="how-text">
                         <h3>Rigorous Vetting</h3>
-                        <p>We conduct technical conversations that assess real understanding. We review code samples with an engineer's eye. We evaluate problem-solving approaches, learning ability, and collaboration skills. We look for signals that predict long-term success.</p>
-                        <p>Our screening process is thorough but respectful. Candidates appreciate conversations with people who understand their work. This creates better experiences and stronger engagement throughout the process.</p>
+                        <p>We conduct technical conversations that assess real understanding. We review code samples, evaluate problem-solving approaches, and look for signals that predict long-term success.</p>
                     </div>
                 </div>
-
                 <div class="how-step">
                     <div class="how-number">04</div>
                     <div class="how-text">
                         <h3>Seamless Coordination</h3>
-                        <p>We manage all logistics—scheduling, communications, interview preparation, and feedback collection. You focus on evaluating candidates; we handle everything else efficiently.</p>
-                        <p>Throughout the process, you get real-time updates, honest feedback, and clear insights. No surprises, no delays, no confusion.</p>
+                        <p>We manage all logistics—scheduling, communications, interview preparation, and feedback collection. You focus on evaluating candidates; we handle everything else.</p>
                     </div>
                 </div>
-
                 <div class="how-step">
                     <div class="how-number">05</div>
                     <div class="how-text">
                         <h3>Offer Support & Onboarding</h3>
-                        <p>When you've found the right candidate, we facilitate offer discussions with market data, clear communication, and creative problem-solving. We help both sides reach agreements that feel fair and exciting.</p>
-                        <p>Our involvement continues through onboarding and beyond. We check in during the first months to ensure successful integration and address any concerns early.</p>
+                        <p>We facilitate offer discussions and help both sides reach fair agreements. Our involvement continues through onboarding to ensure successful integration.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose Us Section -->
-    <section class="why-choose-section" id="why-choose">
+    <!-- Stories Section -->
+    <section class="stories-section">
         <div class="container">
             <div class="section-header">
-                <h2>Why Choose DecaHire</h2>
-                <p>What sets us apart in the recruitment landscape</p>
+                <h2>Success Stories</h2>
+                <p>Real results from real partnerships</p>
             </div>
-
-            <div class="why-choose-grid">
-                <div class="why-choose-card">
-                    <div class="why-choose-icon">🎓</div>
-                    <h3>Battle-Tested Experience</h3>
-                    <p>Our team brings decades of combined experience from building enterprise products, scaling engineering teams, and implementing corporate hiring technology. We've lived the challenges you face from both sides of the table.</p>
+            <div class="stories-grid">
+                <div class="story-card">
+                    <span class="story-category">Startup</span>
+                    <h3>Building a Team from Scratch</h3>
+                    <p>A fintech startup needed to build their entire engineering team—10 engineers across frontend, backend, and DevOps—in 6 weeks.</p>
+                    <p><strong>Result:</strong> Delivered 12 qualified candidates within 2 weeks. 9 offers accepted. Team shipped their MVP 2 weeks ahead of schedule.</p>
+                    <div class="story-stats">
+                        <div class="stat-item-small">
+                            <span class="stat-number">2</span>
+                            <span class="stat-label">Weeks to hire</span>
+                        </div>
+                        <div class="stat-item-small">
+                            <span class="stat-number">9</span>
+                            <span class="stat-label">Hires made</span>
+                        </div>
+                        <div class="stat-item-small">
+                            <span class="stat-number">90%</span>
+                            <span class="stat-label">Accept rate</span>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="why-choose-card">
-                    <div class="why-choose-icon">⚡</div>
-                    <h3>Proven Speed</h3>
-                    <p>Our methodology is built on proven frameworks refined over years of practice. Technology acceleration combined with human expertise delivers candidates in days, not weeks—without ever compromising on quality or fit.</p>
+                <div class="story-card">
+                    <span class="story-category">Enterprise</span>
+                    <h3>Scaling AI Team</h3>
+                    <p>A Fortune 500 company needed to rapidly scale their AI team with senior ML engineers and data scientists.</p>
+                    <p><strong>Result:</strong> Placed 15 senior AI professionals in 3 months. All candidates still with the company after 1 year.</p>
+                    <div class="story-stats">
+                        <div class="stat-item-small">
+                            <span class="stat-number">15</span>
+                            <span class="stat-label">AI experts</span>
+                        </div>
+                        <div class="stat-item-small">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Retention</span>
+                        </div>
+                        <div class="stat-item-small">
+                            <span class="stat-number">3</span>
+                            <span class="stat-label">Months</span>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="why-choose-card">
-                    <div class="why-choose-icon">🎯</div>
-                    <h3>Technical Credibility</h3>
-                    <p>We speak your language because we've written the code, debugged the systems, and made the architectural decisions. Our technical conversations go deep because our understanding is genuine and hard-earned through experience.</p>
-                </div>
-
-                <div class="why-choose-card">
-                    <div class="why-choose-icon">🤝</div>
-                    <h3>Partnership Approach</h3>
-                    <p>We're not transactional recruiters. We invest in understanding your business, culture, and long-term goals. Your success defines our success—it's that simple.</p>
-                </div>
-
-                <div class="why-choose-card">
-                    <div class="why-choose-icon">🔬</div>
-                    <h3>Data-Driven Methods</h3>
-                    <p>Our processes are built on data and continuous optimization. We track what works, learn from placements, and refine based on outcomes—not guesswork.</p>
-                </div>
-
-                <div class="why-choose-card">
-                    <div class="why-choose-icon">🌟</div>
-                    <h3>Candidate Experience</h3>
-                    <p>Great hiring starts with great candidate experiences. We treat every professional with respect, provide honest feedback, and build lasting relationships.</p>
+                <div class="story-card">
+                    <span class="story-category">Product</span>
+                    <h3>Executive Search Success</h3>
+                    <p>A high-growth SaaS company needed a VP of Engineering to lead their 50-person team through rapid scaling.</p>
+                    <p><strong>Result:</strong> Found the perfect leader with relevant scale-up experience. Hired within 4 weeks. Engineering velocity increased 40% in 6 months.</p>
+                    <div class="story-stats">
+                        <div class="stat-item-small">
+                            <span class="stat-number">4</span>
+                            <span class="stat-label">Weeks to hire</span>
+                        </div>
+                        <div class="stat-item-small">
+                            <span class="stat-number">40%</span>
+                            <span class="stat-label">Velocity gain</span>
+                        </div>
+                        <div class="stat-item-small">
+                            <span class="stat-number">1</span>
+                            <span class="stat-label">Perfect fit</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -2498,7 +703,6 @@
                 <div class="network-text">
                     <h2>Join Our Talent Network</h2>
                     <p>Are you a talented technology professional looking for your next opportunity? Join thousands of engineers, architects, product managers, and tech leaders in our network.</p>
-
                     <div class="network-benefits">
                         <div class="benefit-item">
                             <span class="benefit-icon">✓</span>
@@ -2529,11 +733,52 @@
                             </div>
                         </div>
                     </div>
-
-                    <a href="/cdn-cgi/l/email-protection#15617479707b6155717076747d7c67703b767a78" class="cta-button">Join Our Network</a>
+                    <a href="mailto:hire@DecaHire.com" class="cta-button">Join Our Network</a>
                 </div>
                 <div class="network-image">
-                    <img src="images/join-network.png" alt="Technology professionals collaborating - join talent network">
+                    <img src="images/join-network.png" alt="Technology professionals">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section class="why-choose-section" id="why-choose">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose DecaHire</h2>
+                <p>What sets us apart in the recruitment landscape</p>
+            </div>
+            <div class="why-choose-grid">
+                <div class="why-choose-card">
+                    <div class="why-choose-icon">🎓</div>
+                    <h3>Battle-Tested Experience</h3>
+                    <p>Our team brings decades of combined experience from building enterprise products, scaling engineering teams, and implementing corporate hiring technology.</p>
+                </div>
+                <div class="why-choose-card">
+                    <div class="why-choose-icon">⚡</div>
+                    <h3>Proven Speed</h3>
+                    <p>Our methodology delivers candidates in days, not weeks—without ever compromising on quality or fit.</p>
+                </div>
+                <div class="why-choose-card">
+                    <div class="why-choose-icon">🎯</div>
+                    <h3>Technical Credibility</h3>
+                    <p>We speak your language because we've written the code, debugged the systems, and made the architectural decisions.</p>
+                </div>
+                <div class="why-choose-card">
+                    <div class="why-choose-icon">🤝</div>
+                    <h3>Partnership Approach</h3>
+                    <p>We're not transactional recruiters. We invest in understanding your business, culture, and long-term goals.</p>
+                </div>
+                <div class="why-choose-card">
+                    <div class="why-choose-icon">🔬</div>
+                    <h3>Data-Driven Methods</h3>
+                    <p>Our processes are built on data and continuous optimization. We track what works and refine based on outcomes.</p>
+                </div>
+                <div class="why-choose-card">
+                    <div class="why-choose-icon">🌟</div>
+                    <h3>Candidate Experience</h3>
+                    <p>Great hiring starts with great candidate experiences. We treat every professional with respect and build lasting relationships.</p>
                 </div>
             </div>
         </div>
@@ -2546,7 +791,6 @@
                 <h2>Our Services</h2>
                 <p>Comprehensive recruitment solutions tailored to your needs</p>
             </div>
-
             <div class="services-nav">
                 <a href="#tech-recruitment" class="service-nav-link">Tech Recruitment</a>
                 <a href="#executive-search" class="service-nav-link">Executive Search</a>
@@ -2565,43 +809,38 @@
                     <h2>Tech Recruitment</h2>
                     <p class="service-subtitle">Building high-performing engineering teams at speed</p>
                 </div>
-
                 <div class="service-main">
-                    <img src="images/tech-recruitment.png" alt="Software engineering code on laptop - tech recruitment service">
-
+                    <img src="images/tech-recruitment.png" alt="Tech recruitment">
                     <div class="service-description">
                         <h3>Your Partner for Technical Hiring Excellence</h3>
-                        <p>Technology roles require deep technical understanding to assess properly. Our team brings hands-on experience building production systems, which means we can evaluate candidates on what truly matters—not just keywords on resumes.</p>
-
-                        <p>We recruit across the full engineering spectrum: software engineers (frontend, backend, full-stack, mobile), DevOps and SRE professionals, data engineers, ML engineers, QA automation specialists, and technical architects. Whether you need one critical hire or an entire team, we deliver quality candidates fast.</p>
+                        <p>Technology roles require deep technical understanding to assess properly. Our team brings hands-on experience building production systems, which means we can evaluate candidates on what truly matters.</p>
+                        <p>We recruit across the full engineering spectrum: software engineers, DevOps professionals, data engineers, ML engineers, QA specialists, and technical architects.</p>
                     </div>
                 </div>
-
                 <div class="service-features">
                     <div class="feature-col">
                         <h4>What We Offer</h4>
                         <ul>
                             <li>Deep technical screening by engineers</li>
-                            <li>Assessment of coding ability and system design skills</li>
+                            <li>Assessment of coding ability and system design</li>
                             <li>Evaluation of problem-solving approaches</li>
-                            <li>Cultural fit and team dynamics assessment</li>
+                            <li>Cultural fit assessment</li>
                             <li>Fast turnaround—candidates in 3-5 days</li>
-                            <li>Post-placement support and follow-up</li>
+                            <li>Post-placement support</li>
                         </ul>
                     </div>
                     <div class="feature-col">
                         <h4>Ideal For</h4>
                         <ul>
-                            <li>Startups building their first engineering team</li>
-                            <li>Scale-ups rapidly expanding teams</li>
-                            <li>Product companies launching new initiatives</li>
-                            <li>Service companies staffing client projects</li>
-                            <li>Captives building specialized capabilities</li>
-                            <li>Traditional companies undergoing digital transformation</li>
+                            <li>Startups building their first team</li>
+                            <li>Scale-ups rapidly expanding</li>
+                            <li>Product companies launching initiatives</li>
+                            <li>Service companies staffing projects</li>
+                            <li>Captives building capabilities</li>
+                            <li>Traditional companies transforming</li>
                         </ul>
                     </div>
                 </div>
-
                 <div class="service-cta">
                     <a href="#contact" class="cta-button">Start Hiring Technical Talent</a>
                 </div>
@@ -2618,28 +857,24 @@
                     <h2>Executive Search</h2>
                     <p class="service-subtitle">Finding transformational technology leaders</p>
                 </div>
-
                 <div class="service-main">
-                    <img src="images/executive-search.png" alt="Technology executive leader - executive search service">
-
+                    <img src="images/executive-search.png" alt="Executive search">
                     <div class="service-description">
                         <h3>Leadership That Drives Results</h3>
-                        <p>Executive hiring requires understanding both technical excellence and leadership capability. We identify technology leaders who can set vision, build teams, drive execution, and deliver business outcomes.</p>
-
-                        <p>Our executive search covers CTOs, VPs of Engineering, Engineering Directors, Chief Architects, Heads of Product, and other senior technology leadership roles. We understand what it takes to lead at scale because our team has held these positions.</p>
+                        <p>Executive hiring requires understanding both technical excellence and leadership capability. We identify technology leaders who can set vision, build teams, and deliver business outcomes.</p>
+                        <p>Our executive search covers CTOs, VPs of Engineering, Engineering Directors, Chief Architects, Heads of Product, and other senior technology leadership roles.</p>
                     </div>
                 </div>
-
                 <div class="service-features">
                     <div class="feature-col">
                         <h4>Our Approach</h4>
                         <ul>
-                            <li>Confidential and discreet search process</li>
-                            <li>Access to passive candidates not actively looking</li>
+                            <li>Confidential and discreet process</li>
+                            <li>Access to passive candidates</li>
                             <li>Comprehensive leadership assessment</li>
-                            <li>Cultural alignment and values evaluation</li>
-                            <li>Reference checks and background verification</li>
-                            <li>Negotiation support and offer optimization</li>
+                            <li>Cultural alignment evaluation</li>
+                            <li>Reference checks and verification</li>
+                            <li>Negotiation support</li>
                         </ul>
                     </div>
                     <div class="feature-col">
@@ -2647,14 +882,13 @@
                         <ul>
                             <li>Chief Technology Officer (CTO)</li>
                             <li>VP of Engineering / Technology</li>
-                            <li>Engineering Directors and Senior Directors</li>
-                            <li>Chief Architect / Distinguished Engineers</li>
-                            <li>Head of Product / Chief Product Officer</li>
-                            <li>Heads of Data, AI/ML, DevOps, Security</li>
+                            <li>Engineering Directors</li>
+                            <li>Chief Architect</li>
+                            <li>Head of Product / CPO</li>
+                            <li>Heads of Data, AI/ML, DevOps</li>
                         </ul>
                     </div>
                 </div>
-
                 <div class="service-cta">
                     <a href="#contact" class="cta-button">Find Your Next Technology Leader</a>
                 </div>
@@ -2669,47 +903,42 @@
                 <div class="service-header">
                     <span class="service-badge">Service</span>
                     <h2>Contract Hiring</h2>
-                    <p class="service-subtitle">Flexible talent for projects, peaks, and specialized needs</p>
+                    <p class="service-subtitle">Flexible talent for projects and specialized needs</p>
                 </div>
-
                 <div class="service-main">
-                    <img src="images/contract-professionals.png" alt="Contract developers working on project - flexible hiring">
-
+                    <img src="images/contract-professionals.png" alt="Contract professionals">
                     <div class="service-description">
                         <h3>Agility When You Need It</h3>
-                        <p>Not every role requires a permanent hire. Sometimes you need specialized expertise for a project, additional capacity during peak periods, or flexibility to scale up and down based on business needs.</p>
-
-                        <p>Our contract hiring service delivers experienced professionals who can contribute immediately. We handle short-term contracts (3-6 months), long-term contracts (6-12+ months), contract-to-hire arrangements, and project-based engagements across all technical disciplines.</p>
+                        <p>Not every role requires a permanent hire. Sometimes you need specialized expertise for a project or additional capacity during peak periods.</p>
+                        <p>Our contract hiring service delivers experienced professionals who can contribute immediately across short-term and long-term engagements.</p>
                     </div>
                 </div>
-
                 <div class="service-features">
                     <div class="feature-col">
                         <h4>Contract Solutions</h4>
                         <ul>
                             <li>Project-based specialists</li>
-                            <li>Peak season capacity augmentation</li>
-                            <li>Interim leadership during transitions</li>
+                            <li>Peak season capacity</li>
+                            <li>Interim leadership</li>
                             <li>Specialized skills for short-term needs</li>
-                            <li>Contract-to-hire evaluation periods</li>
-                            <li>Fast deployment—often within 1-2 weeks</li>
+                            <li>Contract-to-hire arrangements</li>
+                            <li>Fast deployment—1-2 weeks</li>
                         </ul>
                     </div>
                     <div class="feature-col">
                         <h4>Common Scenarios</h4>
                         <ul>
-                            <li>Product launches requiring temporary team expansion</li>
-                            <li>Migration projects needing specialized expertise</li>
-                            <li>Backfill during parental leave or sabbaticals</li>
-                            <li>Evaluation of talent before permanent offers</li>
-                            <li>Seasonal demand spikes in e-commerce or events</li>
-                            <li>Budget flexibility for uncertain economic conditions</li>
+                            <li>Product launches</li>
+                            <li>Migration projects</li>
+                            <li>Backfill during leave</li>
+                            <li>Talent evaluation periods</li>
+                            <li>Seasonal demand spikes</li>
+                            <li>Budget flexibility needs</li>
                         </ul>
                     </div>
                 </div>
-
                 <div class="service-cta">
-                    <a href="#contact" class="cta-button">Discuss Contract Staffing Needs</a>
+                    <a href="#contact" class="cta-button">Discuss Contract Staffing</a>
                 </div>
             </div>
         </div>
@@ -2722,45 +951,40 @@
                 <div class="service-header">
                     <span class="service-badge">Service</span>
                     <h2>Talent Advisory</h2>
-                    <p class="service-subtitle">Strategic guidance for building and scaling technical teams</p>
+                    <p class="service-subtitle">Strategic guidance for building technical teams</p>
                 </div>
-
                 <div class="service-main">
-                    <img src="images/strategic-planning.png" alt="Strategic talent planning and advisory session">
-
+                    <img src="images/strategic-planning.png" alt="Strategic planning">
                     <div class="service-description">
                         <h3>Beyond Recruitment—Strategic Partnership</h3>
-                        <p>Sometimes you need more than candidates—you need strategic thinking about team structure, compensation benchmarks, hiring processes, employer branding, or market insights. Our talent advisory service provides expert guidance drawn from years of building and scaling technical organizations.</p>
-
-                        <p>We help you think through difficult talent decisions, design hiring strategies, optimize recruitment processes, and navigate competitive talent markets. Consider us an extension of your leadership team for all things talent-related.</p>
+                        <p>Sometimes you need more than candidates—you need strategic thinking about team structure, compensation benchmarks, hiring processes, and market insights.</p>
+                        <p>Our talent advisory service provides expert guidance drawn from years of building and scaling technical organizations.</p>
                     </div>
                 </div>
-
                 <div class="service-features">
                     <div class="feature-col">
                         <h4>Advisory Services</h4>
                         <ul>
                             <li>Team structure and organization design</li>
-                            <li>Compensation benchmarking and analysis</li>
+                            <li>Compensation benchmarking</li>
                             <li>Hiring process optimization</li>
                             <li>Employer branding and positioning</li>
-                            <li>Market intelligence and competitive insights</li>
-                            <li>Technical interview design and training</li>
+                            <li>Market intelligence</li>
+                            <li>Technical interview design</li>
                         </ul>
                     </div>
                     <div class="feature-col">
                         <h4>Who Benefits</h4>
                         <ul>
-                            <li>First-time CTOs building leadership capabilities</li>
-                            <li>Founders establishing hiring foundations</li>
-                            <li>HR leaders entering technology recruitment</li>
-                            <li>Companies entering new markets or geographies</li>
-                            <li>Organizations struggling with retention</li>
-                            <li>Teams planning significant scale-up initiatives</li>
+                            <li>First-time CTOs</li>
+                            <li>Founders establishing foundations</li>
+                            <li>HR leaders entering tech recruitment</li>
+                            <li>Companies entering new markets</li>
+                            <li>Organizations with retention challenges</li>
+                            <li>Teams planning scale-up</li>
                         </ul>
                     </div>
                 </div>
-
                 <div class="service-cta">
                     <a href="#contact" class="cta-button">Schedule Advisory Consultation</a>
                 </div>
@@ -2773,7 +997,7 @@
         <div class="container">
             <h2>Ready to 10X Your Hiring?</h2>
             <p>Let's have a conversation about your hiring needs. Experience the difference that technology and true understanding can make.</p>
-            <a href="/cdn-cgi/l/email-protection#debdb1b0aabfbdaa9ebabbbdbfb6b7acbbf0bdb1b3" class="cta-button">Schedule a Consultation</a>
+            <a href="#contact" class="cta-button">Schedule a Consultation</a>
         </div>
     </section>
 
@@ -2781,12 +1005,67 @@
     <section class="visual-cta">
         <div class="container">
             <div class="visual-cta-grid">
-                <img src="images/cta-image-1.png" alt="Tech lead presenting to team - start hiring today" class="cta-image">
-                <img src="images/cta-image-2.png" alt="Development team collaborating on project" class="cta-image">
-                <img src="images/cta-image-3.png" alt="Technology professionals coding together" class="cta-image">
+                <img src="images/cta-image-1.png" alt="Tech team" class="cta-image">
+                <img src="images/cta-image-2.png" alt="Development team" class="cta-image">
+                <img src="images/cta-image-3.png" alt="Tech professionals" class="cta-image">
             </div>
         </div>
     </section>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal-overlay">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2>Let's Talk!</h2>
+                <p>Tell us about your hiring needs</p>
+                <button class="modal-close" onclick="closeContactModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="popupContactForm">
+                    <div class="form-row">
+                        <div class="popup-form-group">
+                            <label for="popup-name">Full Name *</label>
+                            <input type="text" id="popup-name" required placeholder="John Smith">
+                        </div>
+                        <div class="popup-form-group">
+                            <label for="popup-email">Email *</label>
+                            <input type="email" id="popup-email" required placeholder="john@company.com">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="popup-form-group">
+                            <label for="popup-company">Company</label>
+                            <input type="text" id="popup-company" placeholder="Your Company Inc.">
+                        </div>
+                        <div class="popup-form-group">
+                            <label for="popup-phone">Phone</label>
+                            <input type="tel" id="popup-phone" placeholder="+1 (555) 123-4567">
+                        </div>
+                    </div>
+                    <div class="popup-form-group">
+                        <label for="popup-service">Interested In? *</label>
+                        <select id="popup-service" required>
+                            <option value="">Select a service...</option>
+                            <option value="tech-recruitment">Tech Recruitment</option>
+                            <option value="executive-search">Executive Search</option>
+                            <option value="contract-hiring">Contract Hiring</option>
+                            <option value="talent-advisory">Talent Advisory</option>
+                            <option value="general-inquiry">General Inquiry</option>
+                            <option value="partnership">Partnership</option>
+                        </select>
+                    </div>
+                    <div class="popup-form-group">
+                        <label for="popup-message">Message *</label>
+                        <textarea id="popup-message" required placeholder="Tell us about your hiring needs..."></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="popup-submit-btn">Send Message</button>
+                        <div id="popup-form-message" class="form-message"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer>
@@ -2810,396 +1089,25 @@
                     <ul>
                         <li><a href="#about">About DecaHire</a></li>
                         <li><a href="#how-we-work">How We Work</a></li>
-                        <li><a href="#success-stories">Success Stories</a></li>
                         <li><a href="#join-network">Join Our Network</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Connect</h4>
                     <ul>
-                        <li>
-    <p>
-        <a href="mailto:hire@DecaHire.com" style="color: #ff6b4a;">
-            hire@DecaHire.com
-        </a>
-    </p>
-</li>
+                        <li><a href="mailto:hire@DecaHire.com">hire@DecaHire.com</a></li>
                         <li><a href="#contact">Partner With Us</a></li>
-                        <li><a href="#">Privacy Pol
-                            </a></li></ul></div></div></div></footer>
-
-<!-- Popup Contact Form -->
-<style>
-.modal-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.75);
-    z-index: 9999;
-    animation: fadeIn 0.3s ease;
-}
-
-.modal-overlay.active {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-.modal-container {
-    background: white;
-    border-radius: 16px;
-    max-width: 600px;
-    width: 100%;
-    max-height: 90vh;
-    overflow-y: auto;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-    animation: slideUp 0.4s ease;
-    position: relative;
-}
-
-@keyframes slideUp {
-    from { transform: translateY(100px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-}
-
-.modal-header {
-    padding: 30px 30px 20px;
-    border-bottom: 1px solid #e0e0e0;
-    position: relative;
-}
-
-.modal-header h2 {
-    font-size: 28px;
-    font-weight: 700;
-    color: #1a1a1a;
-    margin: 0 0 8px 0;
-}
-
-.modal-header p {
-    font-size: 16px;
-    color: #666;
-    margin: 0;
-}
-
-.modal-close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: transparent;
-    border: none;
-    font-size: 32px;
-    color: #999;
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-    transition: all 0.3s;
-    line-height: 1;
-}
-
-.modal-close:hover {
-    background: #f0f0f0;
-    color: #333;
-}
-
-.modal-body {
-    padding: 30px;
-}
-
-.popup-form-group {
-    margin-bottom: 20px;
-}
-
-.popup-form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 600;
-    color: #1a1a1a;
-    font-size: 14px;
-}
-
-.popup-form-group input,
-.popup-form-group textarea,
-.popup-form-group select {
-    width: 100%;
-    padding: 14px 16px;
-    border: 2px solid #e0e0e0;
-    border-radius: 8px;
-    font-size: 16px;
-    font-family: inherit;
-    transition: all 0.3s;
-    background: white;
-}
-
-.popup-form-group input:focus,
-.popup-form-group textarea:focus,
-.popup-form-group select:focus {
-    outline: none;
-    border-color: #ff6b4a;
-    box-shadow: 0 0 0 3px rgba(255, 107, 74, 0.1);
-}
-
-.popup-form-group textarea {
-    resize: vertical;
-    min-height: 120px;
-}
-
-.form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-.modal-footer {
-    padding: 0 30px 30px;
-}
-
-.popup-submit-btn {
-    width: 100%;
-    background: #ff6b4a;
-    color: white;
-    padding: 16px 32px;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-.popup-submit-btn:hover:not(:disabled) {
-    background: #ff5533;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 107, 74, 0.3);
-}
-
-.popup-submit-btn:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-}
-
-.form-message {
-    margin-top: 20px;
-    padding: 16px;
-    border-radius: 8px;
-    text-align: center;
-    font-weight: 500;
-    display: none;
-}
-
-.form-message.success {
-    background: #d4edda;
-    color: #155724;
-    border: 1px solid #c3e6cb;
-}
-
-.form-message.error {
-    background: #f8d7da;
-    color: #721c24;
-    border: 1px solid #f5c6cb;
-}
-
-.form-message.show {
-    display: block;
-}
-
-@media (max-width: 768px) {
-    .modal-container { max-height: 95vh; }
-    .form-row { grid-template-columns: 1fr; gap: 0; }
-    .modal-header h2 { font-size: 24px; }
-    .modal-header, .modal-body, .modal-footer { padding: 20px; }
-}
-</style>
-
-<div id="contactModal" class="modal-overlay">
-    <div class="modal-container">
-        <div class="modal-header">
-            <h2>Let's Talk!</h2>
-            <p>Tell us about your hiring needs</p>
-            <button class="modal-close" onclick="closeContactModal()">&times;</button>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 DecaHire. All rights reserved.</p>
+            </div>
         </div>
-        <div class="modal-body">
-            <form id="popupContactForm">
-                <div class="form-row">
-                    <div class="popup-form-group">
-                        <label for="popup-name">Full Name *</label>
-                        <input type="text" id="popup-name" required placeholder="Rama K Reddy">
-                    </div>
-                    <div class="popup-form-group">
-                        <label for="popup-email">Email *</label>
-                        <input type="email" id="popup-email" required placeholder="ram@Decahire.com">
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="popup-form-group">
-                        <label for="popup-company">Company</label>
-                        <input type="text" id="popup-company" placeholder="Decahire.">
-                    </div>
-                    <div class="popup-form-group">
-                        <label for="popup-phone">Phone</label>
-                        <input type="tel" id="popup-phone" placeholder="+91 996640 2526">
-                    </div>
-                </div>
-                <div class="popup-form-group">
-                    <label for="popup-service">Interested In? *</label>
-                    <select id="popup-service" required>
-                        <option value="">Select a service...</option>
-                        <option value="tech-recruitment">Tech Recruitment</option>
-                        <option value="executive-search">Executive Search</option>
-                        <option value="contract-hiring">Contract Hiring</option>
-                        <option value="talent-advisory">Talent Advisory</option>
-                        <option value="general-inquiry">General Inquiry</option>
-                        <option value="partnership">Partnership</option>
-                    </select>
-                </div>
-                <div class="popup-form-group">
-                    <label for="popup-message">Message *</label>
-                    <textarea id="popup-message" required placeholder="We are listening, how can we help you today..."></textarea>
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" class="popup-submit-btn" id="popup-submit-btn">Send Message</button>
-                    <div id="popup-form-message" class="form-message"></div>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
+    </footer>
 
-<!-- Popup Contact Form -->
-<style>
-.modal-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.75);z-index:9999;animation:fadeIn 0.3s ease}
-.modal-overlay.active{display:flex;justify-content:center;align-items:center;padding:20px}
-@keyframes fadeIn{from{opacity:0}to{opacity:1}}
-.modal-container{background:white;border-radius:16px;max-width:600px;width:100%;max-height:90vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,0.3);animation:slideUp 0.4s ease;position:relative}
-@keyframes slideUp{from{transform:translateY(100px);opacity:0}to{transform:translateY(0);opacity:1}}
-.modal-header{padding:30px 30px 20px;border-bottom:1px solid #e0e0e0;position:relative}
-.modal-header h2{font-size:28px;font-weight:700;color:#1a1a1a;margin:0 0 8px 0}
-.modal-header p{font-size:16px;color:#666;margin:0}
-.modal-close{position:absolute;top:20px;right:20px;background:transparent;border:none;font-size:32px;color:#999;cursor:pointer;width:40px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:8px;transition:all 0.3s;line-height:1}
-.modal-close:hover{background:#f0f0f0;color:#333}
-.modal-body{padding:30px}
-.popup-form-group{margin-bottom:20px}
-.popup-form-group label{display:block;margin-bottom:8px;font-weight:600;color:#1a1a1a;font-size:14px}
-.popup-form-group input,.popup-form-group textarea,.popup-form-group select{width:100%;padding:14px 16px;border:2px solid #e0e0e0;border-radius:8px;font-size:16px;font-family:inherit;transition:all 0.3s;background:white}
-.popup-form-group input:focus,.popup-form-group textarea:focus,.popup-form-group select:focus{outline:none;border-color:#ff6b4a;box-shadow:0 0 0 3px rgba(255,107,74,0.1)}
-.popup-form-group textarea{resize:vertical;min-height:120px}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.modal-footer{padding:0 30px 30px}
-.popup-submit-btn{width:100%;background:#ff6b4a;color:white;padding:16px 32px;border-radius:8px;font-weight:600;font-size:16px;border:none;cursor:pointer;transition:all 0.3s}
-.popup-submit-btn:hover:not(:disabled){background:#ff5533;transform:translateY(-2px);box-shadow:0 6px 20px rgba(255,107,74,0.3)}
-.popup-submit-btn:disabled{opacity:0.6;cursor:not-allowed}
-.form-message{margin-top:20px;padding:16px;border-radius:8px;text-align:center;font-weight:500;display:none}
-.form-message.success{background:#d4edda;color:#155724;border:1px solid #c3e6cb}
-.form-message.error{background:#f8d7da;color:#721c24;border:1px solid #f5c6cb}
-.form-message.show{display:block}
-@media (max-width:768px){.modal-container{max-height:95vh}.form-row{grid-template-columns:1fr;gap:0}.modal-header h2{font-size:24px}.modal-header,.modal-body,.modal-footer{padding:20px}}
-</style>
-
-<div id="contactModal" class="modal-overlay">
-    <div class="modal-container">
-        <div class="modal-header">
-            <h2>Let's Talk!</h2>
-            <p>Tell us about your hiring needs</p>
-            <button class="modal-close" onclick="closeContactModal()">&times;</button>
-        </div>
-        <div class="modal-body">
-            <form id="popupContactForm">
-                <div class="form-row">
-                    <div class="popup-form-group">
-                        <label for="popup-name">Full Name *</label>
-                        <input type="text" id="popup-name" required placeholder="John Smith">
-                    </div>
-                    <div class="popup-form-group">
-                        <label for="popup-email">Email *</label>
-                        <input type="email" id="popup-email" required placeholder="john@company.com">
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="popup-form-group">
-                        <label for="popup-company">Company</label>
-                        <input type="text" id="popup-company" placeholder="Your Company Inc.">
-                    </div>
-                    <div class="popup-form-group">
-                        <label for="popup-phone">Phone</label>
-                        <input type="tel" id="popup-phone" placeholder="+1 (555) 123-4567">
-                    </div>
-                </div>
-                <div class="popup-form-group">
-                    <label for="popup-service">Interested In? *</label>
-                    <select id="popup-service" required>
-                        <option value="">Select a service...</option>
-                        <option value="tech-recruitment">Tech Recruitment</option>
-                        <option value="executive-search">Executive Search</option>
-                        <option value="contract-hiring">Contract Hiring</option>
-                        <option value="talent-advisory">Talent Advisory</option>
-                        <option value="general-inquiry">General Inquiry</option>
-                        <option value="partnership">Partnership</option>
-                    </select>
-                </div>
-                <div class="popup-form-group">
-                    <label for="popup-message">Message *</label>
-                    <textarea id="popup-message" required placeholder="Tell us about your hiring needs..."></textarea>
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" class="popup-submit-btn" id="popup-submit-btn">Send Message</button>
-                    <div id="popup-form-message" class="form-message"></div>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script>
-const SUPABASE_URL='https://xabfzikbvvppdcrijmrw.supabase.co';
-const SUPABASE_ANON_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhhYmZ6aWtidnZwcGRjcmlqbXJ3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjMwMDA3MDYsImV4cCI6MjA3ODU3NjcwNn0.xsSS5MQ06WQdcXwA8pkh95zTNkyAVI_TOS-7lNl0snU';
-const supabase=window.supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY);
-function openContactModal(s=''){const m=document.getElementById('contactModal');m.classList.add('active');document.body.style.overflow='hidden';if(s)document.getElementById('popup-service').value=s;setTimeout(()=>document.getElementById('popup-name').focus(),300)}
-function closeContactModal(){const m=document.getElementById('contactModal');m.classList.remove('active');document.body.style.overflow='';document.getElementById('popupContactForm').reset();document.getElementById('popup-form-message').className='form-message'}
-document.getElementById('contactModal')?.addEventListener('click',function(e){if(e.target===this)closeContactModal()});
-document.addEventListener('keydown',function(e){if(e.key==='Escape')closeContactModal()});
-let lastSubmitTime=0;const COOLDOWN_MS=30000;
-function validateEmail(e){return/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e)}
-function showMessage(m,s){const d=document.getElementById('popup-form-message');d.textContent=m;d.className='form-message '+(s?'success':'error')+' show';if(s)setTimeout(()=>closeContactModal(),3000)}
-document.getElementById('popupContactForm')?.addEventListener('submit',async function(e){
-e.preventDefault();const now=Date.now();
-if(now-lastSubmitTime<COOLDOWN_MS){showMessage('Please wait '+Math.ceil((COOLDOWN_MS-(now-lastSubmitTime))/1000)+' seconds',false);return}
-const formData={name:document.getElementById('popup-name').value.trim(),email:document.getElementById('popup-email').value.trim(),company:document.getElementById('popup-company').value.trim()||null,phone:document.getElementById('popup-phone').value.trim()||null,service:document.getElementById('popup-service').value,message:document.getElementById('popup-message').value.trim(),status:'new'};
-if(!validateEmail(formData.email)){showMessage('Please enter a valid email',false);return}
-if(formData.message.length<10){showMessage('Please provide more details (min 10 characters)',false);return}
-const btn=document.getElementById('popup-submit-btn');const originalText=btn.textContent;
-btn.textContent='Sending...';btn.disabled=true;
-try{const{data,error}=await supabase.from('contact_submissions').insert([formData]).select();
-if(error)throw new Error(error.message);
-showMessage('Thank you! We will contact you within 24 hours.',true);e.target.reset();lastSubmitTime=now;
-}catch(error){console.error('Error:',error);showMessage('Something went wrong. Please email hello@decahire.com',false);
-}finally{btn.textContent=originalText;btn.disabled=false}
-});
-document.addEventListener('DOMContentLoaded',function(){
-const ctaButtons=document.querySelectorAll('a.cta-button, a[href="#contact"]');
-ctaButtons.forEach(button=>{button.addEventListener('click',function(e){
-e.preventDefault();let service='';const text=this.textContent.toLowerCase();const sectionId=this.closest('section')?.id||'';
-if(text.includes('technology talent')||sectionId==='tech-recruitment')service='tech-recruitment';
-else if(text.includes('leader')||text.includes('executive')||sectionId==='executive-search')service='executive-search';
-else if(text.includes('contract')||text.includes('staffing')||sectionId==='contract-hiring')service='contract-hiring';
-else if(text.includes('advisory')||text.includes('consultation')||sectionId==='talent-advisory')service='talent-advisory';
-else if(text.includes('partner'))service='partnership';
-else service='general-inquiry';
-openContactModal(service);})});
-console.log('✅ Popup ready!',ctaButtons.length,'buttons connected');
-});
-</script>
-
-</body></html>
+    <!-- External JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
