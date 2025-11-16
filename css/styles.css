@@ -802,6 +802,218 @@ nav .container {
 }
 
 /* ==========================================
+   AI VOICE CALLING SYSTEM SECTION
+   ========================================== */
+
+.ai-calling-section {
+    padding: 80px 0;
+    background: var(--background-white);
+    overflow: hidden;
+}
+
+.ai-calling-section .section-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #ff6b4a 0%, #ff8a70 100%);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.ai-calling-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 80px;
+    align-items: center;
+    margin-top: 60px;
+}
+
+/* Left Visual Stack */
+.ai-calling-visual {
+    position: relative;
+    perspective: 1000px;
+}
+
+.calling-stack {
+    position: relative;
+    width: 100%;
+    min-height: 600px;
+}
+
+.stack-layer {
+    position: absolute;
+    width: 90%;
+    max-width: 400px;
+    background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+    border-radius: 16px;
+    padding: 40px 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    color: white;
+    text-align: center;
+}
+
+.stack-layer:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+}
+
+/* Layer positioning for stacked effect */
+.layer-1 {
+    top: 0;
+    left: 0;
+    z-index: 4;
+    background: linear-gradient(135deg, #ff6b4a 0%, #ff5533 100%);
+}
+
+.layer-2 {
+    top: 80px;
+    left: 30px;
+    z-index: 3;
+    background: linear-gradient(135deg, #1a3a52 0%, #2d5f7f 100%);
+}
+
+.layer-3 {
+    top: 160px;
+    left: 60px;
+    z-index: 2;
+    background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+}
+
+.layer-4 {
+    top: 240px;
+    left: 90px;
+    z-index: 1;
+    background: linear-gradient(135deg, #333333 0%, #1a1a1a 100%);
+}
+
+.layer-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.stack-layer h4 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.stack-layer p {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+}
+
+/* Right Features */
+.ai-calling-features {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.calling-feature {
+    display: flex;
+    gap: 24px;
+    align-items: start;
+    padding: 30px;
+    background: var(--background-secondary);
+    border-radius: 16px;
+    border-left: 4px solid #ff6b4a;
+    transition: all 0.3s;
+}
+
+.calling-feature:hover {
+    transform: translateX(8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+    background: var(--background-white);
+}
+
+.calling-feature-icon {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #ff6b4a 0%, #ff8a70 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+}
+
+.calling-feature-content h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+}
+
+.calling-feature-content p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text-body);
+    margin-bottom: 16px;
+}
+
+.feature-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #ff6b4a;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.feature-cta:hover {
+    color: #ff5533;
+    gap: 12px;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .ai-calling-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+    
+    .calling-stack {
+        min-height: 400px;
+    }
+    
+    .stack-layer {
+        width: 85%;
+    }
+    
+    .layer-1 { top: 0; left: 0; }
+    .layer-2 { top: 60px; left: 20px; }
+    .layer-3 { top: 120px; left: 40px; }
+    .layer-4 { top: 180px; left: 60px; }
+}
+
+@media (max-width: 768px) {
+    .calling-feature {
+        flex-direction: column;
+        padding: 24px;
+    }
+    
+    .calling-feature-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+    
+    .calling-stack {
+        min-height: 350px;
+    }
+}
+/* ==========================================
    12. EXPERTISE SECTION
    ========================================== */
 .expertise-section {
