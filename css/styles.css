@@ -1903,17 +1903,21 @@ footer {
    AGGRESSIVE WHITE SPACE REDUCTION
    ========================================== */
 
-/* Reduce ALL section padding */
+/* ==========================================
+   MINIMAL WHITE SPACE - ULTRA COMPACT
+   ========================================== */
+
+/* MINIMAL Section Padding - 30px */
 .hero {
-    padding: 40px 0 20px !important;
+    padding: 30px 0 15px !important;
 }
 
 .visual-hero {
-    padding: 20px 0 30px !important;
+    padding: 15px 0 20px !important;
 }
 
 .stats {
-    padding: 30px 0 !important;
+    padding: 20px 0 !important;
 }
 
 .features,
@@ -1938,29 +1942,40 @@ footer {
 .why-choose-section,
 .service-detail,
 .cta-section {
-    padding: 40px 0 !important;
+    padding: 30px 0 !important;
 }
 
 .services-overview {
-    padding: 30px 0 20px !important;
+    padding: 25px 0 15px !important;
 }
 
-/* Reduce section header margins */
+/* MINIMAL Section Headers - 20px margin */
 .section-header {
-    margin-bottom: 30px !important;  /* Was 60px */
+    margin-bottom: 20px !important;
 }
 
 .section-header h2 {
-    margin-bottom: 12px !important;  /* Was 16px */
+    margin-bottom: 8px !important;
 }
 
-/* Reduce internal spacing */
+.section-header p {
+    margin-bottom: 0 !important;
+}
+
+/* MINIMAL Internal Spacing */
 .advantage-intro,
 .process-intro,
 .roles-intro {
-    margin: 20px auto 30px !important;  /* Reduced */
+    margin: 15px auto 20px !important;
 }
 
+.advantage-intro p,
+.process-intro p,
+.roles-intro p {
+    margin-bottom: 10px !important;
+}
+
+/* MINIMAL Grid Spacing - 20px gaps */
 .advantage-grid,
 .features-grid,
 .process-steps,
@@ -1970,48 +1985,59 @@ footer {
 .values-grid,
 .success-grid,
 .stories-grid,
-.why-choose-grid {
-    margin-top: 30px !important;  /* Was 50px */
+.why-choose-grid,
+.about-grid {
+    margin-top: 20px !important;
+    gap: 20px !important;
 }
 
-.advantage-synthesis {
-    margin-top: 30px !important;  /* Was 50px */
-    padding: 30px !important;  /* Was 40px */
+.trust-grid,
+.why-grid,
+.product-grid,
+.innovation-grid,
+.network-content {
+    gap: 40px !important;  /* Keep some gap for 2-column layouts */
+}
+
+/* MINIMAL Card Padding - 25px */
+.feature-card,
+.advantage-card,
+.success-card,
+.value-card,
+.why-choose-card,
+.story-card,
+.about-card {
+    padding: 25px !important;
+}
+
+.industry-item {
+    padding: 25px 20px !important;
+}
+
+.role-content {
+    padding: 20px 24px 20px !important;
+}
+
+/* MINIMAL Special Boxes */
+.advantage-synthesis,
+.process-detail,
+.tech-highlight,
+.why-highlight,
+.industries-note,
+.roles-note {
+    margin-top: 20px !important;
+    padding: 25px !important;
 }
 
 .process-detail {
-    margin: 40px auto 0 !important;  /* Was 60px */
-    padding: 30px !important;  /* Was 40px */
+    margin: 30px auto 0 !important;
 }
 
-.tech-highlight {
-    margin-top: 30px !important;  /* Was 50px */
-    padding: 30px !important;  /* Was 40px */
+/* MINIMAL Image Margins - 20px */
+.hero-image {
+    margin-bottom: 20px !important;
 }
 
-.why-highlight {
-    margin-top: 30px !important;  /* Was 40px */
-    padding: 30px !important;  /* Was 40px */
-}
-
-/* Reduce spacing in content blocks */
-.trust-content h2,
-.why-content h2,
-.product-content h2,
-.innovation-content h2,
-.network-text h2 {
-    margin-bottom: 20px !important;  /* Was 24px */
-}
-
-.trust-content p,
-.why-content p,
-.product-content p,
-.innovation-content p {
-    margin-bottom: 16px !important;  /* Was 20-24px */
-}
-
-/* Reduce image margins */
-.hero-image,
 .trust-image img,
 .why-image img,
 .product-image img,
@@ -2022,118 +2048,279 @@ footer {
 .industries-content img,
 .about-main img,
 .service-main img {
-    margin-bottom: 30px !important;  /* Was 40px */
+    margin-bottom: 20px !important;
 }
 
-/* Tighter grid gaps */
-.features-grid,
-.advantage-grid,
-.expertise-grid,
-.success-grid,
-.why-choose-grid {
-    gap: 30px !important;  /* Was 40-50px */
+.tech-block {
+    margin-bottom: 40px !important;  /* Was 60px */
 }
 
-.industries-grid,
-.roles-grid,
-.values-grid {
-    gap: 30px !important;  /* Was 40px */
+/* MINIMAL Text Spacing */
+.trust-content h2,
+.why-content h2,
+.product-content h2,
+.innovation-content h2,
+.network-text h2,
+.background-text h3,
+.tech-text h3,
+.about-text h3 {
+    margin-bottom: 15px !important;
 }
 
-.stories-grid {
-    gap: 30px !important;  /* Was 40px */
+.trust-content p,
+.why-content p,
+.product-content p,
+.innovation-content p,
+.background-text p,
+.tech-text p,
+.about-text p {
+    margin-bottom: 12px !important;
 }
 
-/* Reduce padding in cards */
-.feature-card,
-.advantage-card,
-.success-card,
-.value-card,
-.why-choose-card,
-.story-card,
-.about-card {
-    padding: 30px !important;  /* Was 40px */
+.network-text > p {
+    margin-bottom: 30px !important;
 }
 
-.industry-item {
-    padding: 30px 20px !important;  /* Was 40px 30px */
-}
-
-.role-content {
-    padding: 20px 24px 24px !important;  /* Was 24px 30px 30px */
-}
-
-/* Reduce spacing in content sections */
+/* MINIMAL Content Sections */
 .about-content,
 .background-content,
 .tech-content,
 .industries-content {
-    margin-top: 30px !important;  /* Was 50px */
+    margin-top: 25px !important;
 }
 
 .about-main {
-    margin-bottom: 30px !important;  /* Was 50px */
+    margin-bottom: 25px !important;
 }
 
-.about-grid {
-    gap: 30px !important;  /* Was 40px */
-}
-
-/* Reduce process step spacing */
+/* MINIMAL Process Steps */
 .process-steps {
-    gap: 30px !important;  /* Was 40px */
+    margin-top: 30px !important;
+    gap: 25px !important;
+}
+
+.process-step {
+    margin-bottom: 0 !important;
+}
+
+.process-step h3 {
+    margin-bottom: 8px !important;
+}
+
+.process-step p {
+    margin-bottom: 10px !important;
+}
+
+.step-number {
+    margin: 0 auto 20px !important;  /* Was 24px */
+}
+
+/* MINIMAL How We Work */
+.how-content {
+    margin: 30px auto 0 !important;
 }
 
 .how-step {
-    margin-bottom: 30px !important;  /* Was 50px */
+    margin-bottom: 30px !important;
+    gap: 30px !important;
 }
 
-/* Reduce service features spacing */
-.service-features {
-    gap: 30px !important;  /* Was 50px */
-    padding: 30px !important;  /* Was 40px */
-    margin-bottom: 30px !important;  /* Was 40px */
+.how-text h3 {
+    margin-bottom: 15px !important;
+}
+
+.how-text p {
+    margin-bottom: 12px !important;
+}
+
+/* MINIMAL Service Sections */
+.service-header {
+    margin-bottom: 25px !important;
+}
+
+.service-header h2 {
+    margin-bottom: 12px !important;
 }
 
 .service-main {
-    margin-bottom: 30px !important;  /* Was 50px */
+    margin-bottom: 25px !important;
 }
 
-.service-header {
-    margin-bottom: 30px !important;  /* Was 50px */
+.service-description h3 {
+    margin-bottom: 20px !important;
 }
 
-/* Reduce note/highlight box spacing */
-.industries-note,
-.roles-note {
-    padding: 30px !important;  /* Was 40px */
+.service-description p {
+    margin-bottom: 15px !important;
 }
 
-/* Reduce footer padding */
+.service-features {
+    gap: 30px !important;
+    padding: 25px !important;
+    margin-bottom: 25px !important;
+}
+
+.feature-col h4 {
+    margin-bottom: 20px !important;
+}
+
+.service-cta {
+    margin-top: 0 !important;
+}
+
+/* MINIMAL Story Cards */
+.story-card h3 {
+    margin-bottom: 15px !important;
+}
+
+.story-card p {
+    margin-bottom: 12px !important;
+}
+
+.story-stats {
+    margin-top: 20px !important;
+    padding-top: 20px !important;
+    gap: 15px !important;
+}
+
+.stat-number {
+    margin-bottom: 5px !important;
+}
+
+/* MINIMAL Network Benefits */
+.network-benefits {
+    margin-bottom: 30px !important;
+}
+
+.benefit-item {
+    margin-bottom: 20px !important;
+    gap: 15px !important;
+}
+
+.benefit-item strong {
+    margin-bottom: 5px !important;
+}
+
+/* MINIMAL Footer */
 footer {
-    padding: 40px 0 20px !important;  /* Was 50px 0 30px */
+    padding: 35px 0 20px !important;
 }
 
 .footer-content {
-    margin-bottom: 30px !important;  /* Was 40px */
-    gap: 40px !important;  /* Was 50px */
+    margin-bottom: 25px !important;
+    gap: 35px !important;
 }
 
 .footer-bottom {
-    padding-top: 20px !important;  /* Was 30px */
+    padding-top: 20px !important;
 }
 
-/* Reduce CTA section */
+.footer-brand img,
+.footer-logo {
+    margin-bottom: 12px !important;
+}
+
+.footer-section h4 {
+    margin-bottom: 15px !important;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px !important;
+}
+
+/* MINIMAL CTA Section */
+.cta-section {
+    padding: 40px 0 !important;
+}
+
 .cta-section h2 {
-    margin-bottom: 20px !important;  /* Was 24px */
+    margin-bottom: 15px !important;
 }
 
 .cta-section p {
-    margin-bottom: 30px !important;  /* Was 40px */
+    margin-bottom: 25px !important;
 }
 
 .visual-cta {
-    padding: 0 0 30px !important;  /* Was 0 0 50px */
+    padding: 0 0 25px !important;
+}
+
+.visual-cta-grid {
+    gap: 15px !important;
+}
+
+/* MINIMAL Feature Icons */
+.feature-icon {
+    margin-bottom: 20px !important;  /* Was 24px */
+}
+
+.feature-card h3 {
+    margin-bottom: 12px !important;  /* Was 16px */
+}
+
+/* MINIMAL Value Icons */
+.value-icon {
+    margin-bottom: 15px !important;  /* Was 20px */
+}
+
+.value-card h3 {
+    margin-bottom: 8px !important;  /* Was 12px */
+}
+
+.why-choose-icon {
+    margin-bottom: 15px !important;  /* Was 20px */
+}
+
+.why-choose-card h3 {
+    margin-bottom: 12px !important;  /* Was 16px */
+}
+
+/* MINIMAL Stat Items */
+.stat-item h3 {
+    margin-bottom: 5px !important;  /* Was 8px */
+}
+
+/* MINIMAL Advantage Cards */
+.advantage-card h3 {
+    margin-bottom: 10px !important;  /* Was 12px */
+}
+
+.advantage-card p {
+    margin-bottom: 15px !important;  /* Was 20px */
+}
+
+.advantage-card p strong {
+    margin-bottom: 5px !important;  /* Was 8px */
+}
+
+.advantage-synthesis h3 {
+    margin-bottom: 20px !important;  /* Was 24px */
+}
+
+.advantage-synthesis p {
+    margin-bottom: 15px !important;  /* Was 20px */
+}
+
+/* MINIMAL Role Category */
+.role-category h3 {
+    padding: 20px 30px 12px !important;  /* Was 24px 30px 16px */
+}
+
+.role-content p {
+    margin: 15px 0 10px !important;  /* Was 20px 0 12px */
+}
+
+.role-category ul li {
+    padding: 6px 0 6px 20px !important;  /* Was 8px 0 8px 20px */
+}
+
+/* MINIMAL Expertise Cards */
+.expertise-card h3 {
+    padding: 20px 24px 10px !important;  /* Was 24px 24px 12px */
+}
+
+.expertise-card p {
+    padding: 0 24px 20px !important;  /* Was 0 24px 24px */
 }
 
 /* ==========================================
